@@ -1,0 +1,11 @@
+<div class="languagebox">
+{{ form_open() }}
+<i class="fa fa-language text-primary" aria-hidden="true"></i> &nbsp;
+
+    <select class="newform" name="locale" data-request="onSwitchLocale" class="form-control">
+        {% for code, name in locales %}
+            <option value="{{ code }}" {{ code == activeLocale ? 'selected' }}>{{ name }}</option>
+        {% endfor %}
+    </select>
+{{ form_close() }}
+</div>

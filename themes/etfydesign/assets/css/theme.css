@@ -10449,7 +10449,7 @@ Colors
  General CSS tricks
 */
 body {
-  font-family: "Overpass", sans-serif !important; }
+  font-family: 'Overpass', sans-serif !important; }
 
 ol, li {
   margin: 0;
@@ -10469,6 +10469,9 @@ ol, li {
 
 .default-link-color {
   color: #1A0DAB !important; }
+
+.text-primary {
+  color: #712D91 !important; }
 
 .disabled {
   pointer-events: none !important;
@@ -10673,6 +10676,14 @@ a {
   top: 0;
   transform: rotate(90deg);
   transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+.languagebox {
+  margin: 1rem; }
+
+.newform {
+  border: none !important;
+  background-color: transparent;
+  color: #712D91; }
 
 .ui-front {
   z-index: 9999 !important; }

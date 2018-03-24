@@ -1,5 +1,4 @@
 description = "Navbar"
-
 ==
 <nav class="navbar navbar-expand-md fixed-top navbar-light">
     <a href="{{ 'home'|page }}" class="navbar-brand d-flex w-50 mr-auto d-block d-md-none">
@@ -29,7 +28,7 @@ description = "Navbar"
                 <a class="nav-link" href="#">{{ 'Contact'|_ }}</a>
             </li>
             <li class="nav-item">
-                {% component 'localePicker' %}
+                {% partial 'language/default' %}
             </li>
         </ul>
     </div>

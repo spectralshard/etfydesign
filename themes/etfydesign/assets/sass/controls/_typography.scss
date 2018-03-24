@@ -1,0 +1,160 @@
+/*********************
+  Typography
+**********************/
+
+.light-300 {
+  font-weight: 300;
+}
+
+.light-300-italic {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.normal-400 {
+  font-weight: 400;
+}
+
+.normal-400-italic {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.bold-700 {
+  font-weight: 700;
+}
+
+.bold-700-italic {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.x-small {
+  font-size: 0.688rem;
+  line-height: 12px;
+}
+
+.xx-small {
+  font-size: 0.625rem;
+  line-height: 11px;
+}
+
+/* Responsive Headings */
+
+/* Extra Small Devices, Phones */
+@include media-breakpoint-down(xs) {
+  .h1-responsive {
+    font-size: 1.5rem;
+  }
+  .h2-responsive {
+    font-size: 1.375rem;
+  }
+  .h3-responsive {
+    font-size: 1.188rem;
+  }
+  .h4-responsive {
+    font-size: 1.125rem;
+  }
+  .h5-responsive {
+    font-size: 1.063rem;
+  }
+  .text-xs-custom {
+    font-size: 0.75rem;
+    line-height: 14px;
+  }
+  .display-1 {
+    font-size: 2.5rem;
+  }
+  .display-2 {
+    font-size: 2.25rem;
+  }
+  .display-3 {
+    font-size: 2rem;
+  }
+  .display-4 {
+    font-size: 1.75rem;
+  }
+}
+
+
+@include media-breakpoint-up(xs) {
+  .h1-responsive {
+    font-size: 1.875rem;
+  }
+  .h2-responsive {
+    font-size: 1.625rem;
+  }
+  .h3-responsive {
+    font-size: 1.375rem;
+  }
+  .h4-responsive {
+    font-size: 1.25rem;
+  }
+  .h5-responsive {
+    font-size: 1.125rem;
+  }
+  .text-sm-custom {
+    font-size: 0.938rem;
+    line-height: 15px;
+  }
+}
+
+/* Small Devices, Tablets */
+
+@include media-breakpoint-up(md) {
+  .h1-responsive {
+    font-size: 2rem;
+  }
+  .h2-responsive {
+    font-size: 1.75rem;
+  }
+  .h3-responsive {
+    font-size: 1.5rem;
+  }
+  .h4-responsive {
+    font-size: 1.25rem;
+  }
+  .h5-responsive {
+    font-size: 1.125rem;
+  }
+}
+
+/* Medium Devices, Desktops */
+
+@include media-breakpoint-up(lg) {
+  .h1-responsive {
+    font-size: 2.25rem;
+  }
+  .h2-responsive {
+    font-size: 2rem;
+  }
+  .h3-responsive {
+    font-size: 1.75rem;
+  }
+  .h4-responsive {
+    font-size: 1.5rem;
+  }
+  .h5-responsive {
+    font-size: 1.25rem;
+  }
+}
+
+/* Extra Large Devices, Wide Screens */
+
+@include media-breakpoint-up(xl) {
+  .h1-responsive {
+    font-size: 2.5rem;
+  }
+  .h2-responsive {
+    font-size: 2.25rem;
+  }
+  .h3-responsive {
+    font-size: 2rem;
+  }
+  .h4-responsive {
+    font-size: 1.75rem;
+  }
+  .h5-responsive {
+    font-size: 1.5rem;
+  }
+}

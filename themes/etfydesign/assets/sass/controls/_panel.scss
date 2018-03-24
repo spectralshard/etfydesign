@@ -1,0 +1,15 @@
+.panel-primary {
+  @include panel-variant($brand-primary, $body-bg, $brand-primary, $brand-primary);
+}
+.panel-success {
+  @include panel-variant($brand-success, $body-bg, $brand-primary, $brand-primary);
+}
+.panel-info {
+  @include panel-variant($brand-info, $body-bg, $brand-primary, $brand-primary);
+}
+.panel-warning {
+  @include panel-variant($brand-warning, $body-bg, $brand-primary, $brand-primary);
+}
+.panel-danger {
+  @include panel-variant($brand-danger, $body-bg, $brand-primary, $brand-primary);
+}

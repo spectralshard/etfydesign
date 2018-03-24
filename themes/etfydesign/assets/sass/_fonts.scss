@@ -1,0 +1,40 @@
+//
+// Fonts file
+//
+// Allocated area for font definitions used by this application
+//
+@import url('https://fonts.googleapis.com/css?family=Overpass:300,400,400i,700');
+
+@font-face {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+//
+// Chrome exhibits strange behavior when custom fonts are used
+// on select inputs. This fixes the garbled text.
+//
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  select {
+    font-family: sans-serif;
+  }
+}

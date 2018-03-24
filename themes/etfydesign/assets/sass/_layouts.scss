@@ -1,0 +1,278 @@
+/*
+ General CSS tricks
+*/
+body {
+  font-family: 'Overpass', sans-serif !important;
+}
+
+ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: bold!important;
+}
+
+.move-cursor {
+  cursor: move;
+}
+
+.underline:hover {
+  text-decoration: underline!important;
+}
+
+.default-link-color {
+  color: #1A0DAB !important;
+}
+
+.disabled {
+  pointer-events: none!important;
+  cursor: default;
+}
+
+.bg-highlight {
+  background-color: $highlight;
+}
+
+.highlight {
+  color: $highlight;
+}
+
+.small-block {
+  display: inline-block!important;
+  line-height: 16px;
+}
+
+.x-small-block {
+  display: inline-block!important;
+  line-height: 14px;
+  font-size: 0.7rem;
+}
+
+.fa-15x {
+  font-size: 1.5rem;
+}
+
+a {
+  outline: 0;
+  text-decoration: none!important;
+}
+
+@include media-breakpoint-up(md) {
+  .marketing-partial {
+    height: 600px;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .marketing-partial {
+    height: 400px;
+  }
+}
+
+.layout-app {
+  footer, header, main {
+    padding-left: $sidenav-width;
+
+  }
+
+  @include media-breakpoint-down(md) {
+    footer, header, main {
+      padding-left: 0 !important;
+    }
+  }
+
+  header {
+    .navbar {
+      height: 60px;
+      .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.5);
+        .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+        }
+      }
+      .nav-menu {
+        margin-top: 0;
+        display: table;
+        margin-bottom: 0 !important;
+        li {
+          display: table-cell !important;
+          a {
+            color: #fff;
+            padding: 5px 15px;
+            display: inline-block;
+            text-align: center;
+            i.fa, span.lang {
+              font-size: 1.5rem!important;
+            }
+            span {
+              font-size: 0.833rem;
+            }
+          }
+        }
+        li:hover a {
+          background-color: $primary-color;
+        }
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      .navbar {
+        height: 85px;
+        .button-collapse {
+          display: none;
+        }
+        .nav-menu {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  #layout-content, #layout-footer {
+    .main-wrapper, .footer-wrapper {
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+    @include media-breakpoint-down(lg) {
+      .main-wrapper, .footer-wrapper {
+        margin-left: 1%;
+        margin-right: 1%;
+      }
+    }
+  }
+}
+
+//Menu Hack//
+.navbar-light{
+  background: rgba(255, 255, 255, 0.8)!important;
+}
+.navbar-light {
+
+  .navbar-nav {
+    .nav-link {
+      color: $primary-color;
+
+      @include hover-focus {
+        background-color: $primary-color!important;
+        color: $white;
+      }
+
+      &.disabled {
+        color: $navbar-light-disabled-color;
+      }
+    }
+  }
+}
+
+
+.navbar-expand-md .navbar-nav .nav-link{
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  text-align: center;
+}
+
+.nav-link {
+  padding: 1rem 0rem;
+}
+
+//Animated Hamberger//
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 0.7; }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease; }
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block; }
+.hamburger-inner::before {
+  top: -10px; }
+.hamburger-inner::after {
+  bottom: -10px; }
+
+/*
+   * Spring
+   */
+.hamburger--spring .hamburger-inner {
+  top: 2px;
+  transition: background-color 0s 0.13s linear; }
+.hamburger--spring .hamburger-inner::before {
+  top: 10px;
+  transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+.hamburger--spring .hamburger-inner::after {
+  top: 20px;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--spring.is-active .hamburger-inner {
+  transition-delay: 0.22s;
+  background-color: transparent; }
+.hamburger--spring.is-active .hamburger-inner::before {
+  top: 0;
+  transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translate3d(0, 10px, 0) rotate(45deg); }
+.hamburger--spring.is-active .hamburger-inner::after {
+  top: 0;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translate3d(0, 10px, 0) rotate(-45deg); }
+/*
+   * Spring Reverse
+   */
+.hamburger--spring-r .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+.hamburger--spring-r .hamburger-inner::after {
+  top: -20px;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0s linear; }
+.hamburger--spring-r .hamburger-inner::before {
+  transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--spring-r.is-active .hamburger-inner {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+.hamburger--spring-r.is-active .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0s 0.22s linear; }
+.hamburger--spring-r.is-active .hamburger-inner::before {
+  top: 0;
+  transform: rotate(90deg);
+  transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1); }

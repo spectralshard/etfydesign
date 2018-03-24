@@ -1,0 +1,48 @@
+/*********************
+  Parallax
+**********************/
+
+.parallax {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/**
+*  Brand Logo - Media Query
+*/
+
+@include media-breakpoint-down(sm) {
+  .brand-logo {
+    width: 180px;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .brand-logo {
+    margin-top: 7px;
+    width: 230px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .brand-logo {
+    width: 250px;
+  }
+}
+
+/**
+*   Upload Box
+*/
+
+.upload-box {
+  margin-right: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  figure {
+    margin: 0 !important;
+  }
+
+}

@@ -1,0 +1,172 @@
+// Jquery UI Autocomple widget
+
+.ui-front {
+  z-index: 9999 !important;
+}
+
+/* Center modal*/
+
+.modal {
+  text-align: center;
+  padding: 0 !important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  width: 40%;
+}
+
+@include media-breakpoint-down(xs) {
+
+  .modal-dialog {
+    width: 90%;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .modal-dialog {
+    width: 70%;
+  }
+}
+
+/* Scroll to Top*/
+
+.scrollToTop {
+  width: 50px;
+  height: 40px;
+  padding: 0;
+  text-align: center;
+  font-weight: bold;
+  color: #444;
+  text-decoration: none;
+  position: fixed;
+  top: 92%;
+  right: 2%;
+  display: none;
+  opacity: 0.8;
+}
+
+.scrollToTop:hover {
+  text-decoration: none;
+}
+
+/* Loading indicator */
+
+.loading-indicator-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  .indicator-text {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+/* Triangles for bootstrap dropdown menus */
+
+@function opposite-position($directions) {
+  $opposite-directions: ();
+  $direction-map: (
+          'top':    'bottom',
+          'right':  'left',
+          'bottom': 'top',
+          'left':   'right',
+          'center': 'center',
+          'ltr':    'rtl',
+          'rtl':    'ltr'
+  );
+
+  @each $direction in $directions {
+    $direction: to-lower-case($direction);
+
+    @if map-has-key($direction-map, $direction) {
+      $opposite-directions: append($opposite-directions, unquote(map-get($direction-map, $direction)));
+    } @else {
+      @warn "No opposite direction can be found for `#{$direction}`. Direction omitted.";
+    }
+  }
+
+  @return $opposite-directions;
+}
+
+@mixin make-dropdown-menu-triangle($position, $posY, $posX, $valY, $valX) {
+  $baseName: 'dropdown-menu-triangle';
+  .#{$baseName}-#{$position} { &:before, &:after {
+    display: inline-block;
+    position: absolute;
+    content: ''; } };
+
+  @if not index(top right bottom left, $posY) {
+    @error "Direction must be either `top`, `right`, `bottom` or `left`.";
+  }
+
+  .#{$baseName}-#{$position}:before {
+    $perpendicular-borders: -$valY solid transparent;
+    #{$posY}: $valY;
+    #{$posX}: $valX;
+    border-#{opposite-position($posY)}: -$valY solid #ccc;
+
+    @if $posY == top or $posY == bottom {
+      border-left: $perpendicular-borders;
+      border-right: $perpendicular-borders;
+    } @else if posY == right or $posY == left {
+      border-bottom: $perpendicular-borders;
+      border-top: $perpendicular-borders;
+    }
+
+    border-#{opposite-position($posY)}-color: rgba(0, 0, 0, 0.2);
+  };
+
+  .#{$baseName}-#{$position}:after {
+
+    $perpendicular-borders: -($valY + 1) solid transparent;
+
+    #{$posY}: $valY + 1;
+    #{$posX}: $valX + 1;
+    border-#{opposite-position($posY)}: -($valY + 1) solid #fff;
+
+    @if $posY == top or $posY == bottom {
+      border-left: $perpendicular-borders;
+      border-right: $perpendicular-borders;
+    } @else if posY == right or $posY == left {
+      border-bottom: $perpendicular-borders;
+      border-top: $perpendicular-borders;
+    }
+  };
+}
+
+@mixin make-dropdown-menu-triangles($map) {
+  @each $class, $posValue in $map {
+    $posY: nth($posValue, 1);
+    $posX: nth($posValue, 2);
+    $valY: nth($posValue, 3);
+    $valX: nth($posValue, 4);
+    @include make-dropdown-menu-triangle($class, $posY, $posX, $valY, $valX)
+  }
+}
+
+$map: (
+        t-l: (top, left, -7px, 9px),
+        t-r: (top, right, -7px, 9px),
+        b-l: (bottom, left, -7px, 9px),
+        b-r: (bottom, right, -7px, 9px),
+);
+
+@include make-dropdown-menu-triangles($map);
+

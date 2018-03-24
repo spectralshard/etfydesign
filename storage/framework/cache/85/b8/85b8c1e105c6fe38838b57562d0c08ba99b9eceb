@@ -1,0 +1,102 @@
+1521905774a:1:{s:11:"default.htm";a:7:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1564:"description = "Default Layout"
+
+[localePicker]
+forceUrl = 0
+==
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Etfy Design - {{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.description }}">
+    <meta name="title" content="{{ this.page.title }}">
+    <meta name="author" content="Etfy Design">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" type="image/jpg" href="{{ 'assets/images/favicon.jpg'|theme }}"/>
+    <link href="{{ 'assets/images/apple-touch-icon.png'|theme }}" rel="apple-touch-icon">
+    <link href="{{ 'assets/images/apple-touch-icon-precomposed.png'|theme }}" rel="apple-touch-icon-precomposed">
+    <link href="{{ [
+    'assets/css/theme.css',
+    'assets/vendor/animate.css/animate.min.css',
+    ]|theme }}" rel="stylesheet">
+    {% styles %}
+</head>
+<body style="background-color: #0b3f5a">
+
+<header>
+    {% partial 'navbar' %}
+</header>
+
+
+<main id="page">
+    {% page %}
+</main>
+
+<footer>
+    {% partial 'footer' %}
+</footer>
+
+{% flash %}
+<span id="flash" data-type="{{ type }}" data-message="{{ message }}"></span>
+{% endflash %}
+
+<script src="{{ [
+'assets/js/scripts.js',
+'assets/vendor/jquery/jquery-3.2.1.min.js',
+'assets/vendor/popper/popper.js',
+'assets/vendor/tether/dist/js/tether.min.js',
+'assets/vendor/bootstrap/dist/js/bootstrap.min.js',
+]|theme }}"></script>
+
+{% framework extras %}
+{% scripts %}
+</body>";s:5:"mtime";i:1521903451;s:6:"markup";s:1496:"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Etfy Design - {{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.description }}">
+    <meta name="title" content="{{ this.page.title }}">
+    <meta name="author" content="Etfy Design">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" type="image/jpg" href="{{ 'assets/images/favicon.jpg'|theme }}"/>
+    <link href="{{ 'assets/images/apple-touch-icon.png'|theme }}" rel="apple-touch-icon">
+    <link href="{{ 'assets/images/apple-touch-icon-precomposed.png'|theme }}" rel="apple-touch-icon-precomposed">
+    <link href="{{ [
+    'assets/css/theme.css',
+    'assets/vendor/animate.css/animate.min.css',
+    ]|theme }}" rel="stylesheet">
+    {% styles %}
+</head>
+<body style="background-color: #0b3f5a">
+
+<header>
+    {% partial 'navbar' %}
+</header>
+
+
+<main id="page">
+    {% page %}
+</main>
+
+<footer>
+    {% partial 'footer' %}
+</footer>
+
+{% flash %}
+<span id="flash" data-type="{{ type }}" data-message="{{ message }}"></span>
+{% endflash %}
+
+<script src="{{ [
+'assets/js/scripts.js',
+'assets/vendor/jquery/jquery-3.2.1.min.js',
+'assets/vendor/popper/popper.js',
+'assets/vendor/tether/dist/js/tether.min.js',
+'assets/vendor/bootstrap/dist/js/bootstrap.min.js',
+]|theme }}"></script>
+
+{% framework extras %}
+{% scripts %}
+</body>";s:4:"code";N;s:11:"description";s:14:"Default Layout";s:12:"localePicker";a:1:{s:8:"forceUrl";s:1:"0";}}}

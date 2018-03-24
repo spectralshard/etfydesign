@@ -1,0 +1,186 @@
+.btn-space {
+  margin-right: 15px!important;
+}
+
+/*  Cancel Button */
+
+.btn-cancel {
+  border: transparent!important;
+}
+
+.field-required:after {
+  background-color: #c20a0a;
+  width: 5px;
+  height: 5px;
+  margin-left: 3px;
+  vertical-align: super;
+  font-size: 60%;
+  content: "";
+  display: inline-block;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.parsley-errors-list  {
+  margin-top: 0;
+  margin-bottom: 0!important;
+  padding-left: 0!important;
+}
+
+.parsley-errors-list .parsley-required,
+.parsley-errors-list .parsley-type,
+.parsley-errors-list .parsley-equalto {
+  list-style: none;
+  color: $danger-color!important;
+  font-size: 0.75rem;
+}
+
+input[type="text"].parsley-error, input[type="email"].parsley-error,
+input[type="password"].parsley-error, select.parsley-error {
+  border-bottom-color: $danger-color!important;
+  border-bottom-width: 1px!important;
+  box-shadow: 0 1px 0 0 $danger-color!important;
+}
+
+
+label.fixed-text {
+  font-size: 1rem !important;
+  padding-left: 5px;
+}
+
+label.normal-text {
+  font-size: 1rem !important;
+
+}
+
+input.global-search {
+  background-color: #fafafa;
+}
+
+.btn-search {
+  line-height: 23px!important;
+  padding: 4px 12px!important;
+  margin: 8px!important;
+}
+
+.input-field {
+  label {
+    font-weight: 500;
+  }
+}
+
+.custom-file-control::after {
+  font-size: 0.875rem;
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+
+.file-result {
+  float: left;
+}
+
+
+.input-field label {
+  left: 0!important;
+}
+
+
+/***************
+     Switch
+***************/
+
+.switch,
+.switch * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+
+.switch label {
+  cursor: pointer;
+}
+
+.switch label input[type=checkbox] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+//.switch label input[type=checkbox]:checked + .lever {
+//  background-color: $switch-checked-lever-bg;
+//}
+
+.switch label input[type=checkbox]:checked + .lever:after {
+  background-color: $switch-bg-color;
+}
+
+.switch label .lever {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 15px;
+  background-color: $switch-unchecked-lever-bg;
+  border-radius: 15px;
+  margin-right: 10px;
+  transition: background 0.3s ease;
+  vertical-align: middle;
+  margin: 0 16px;
+}
+
+.switch label .lever:after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  background-color: $switch-unchecked-bg;
+  border-radius: 21px;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, .4);
+  left: -5px;
+  top: -3px;
+  transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease;
+}
+
+// Switch active style
+input[type=checkbox]:checked:not(:disabled) ~ .lever:active:after {
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, .4), 0 0 0 15px transparentize($switch-bg-color, .9);
+}
+
+input[type=checkbox]:not(:disabled) ~ .lever:active:after {
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, .4), 0 0 0 15px rgba(0, 0, 0, .08);
+}
+
+.switch label input[type=checkbox]:checked + .lever:after {
+  left: 24px;
+}
+
+// Disabled Styles
+.switch input[type=checkbox][disabled] + .lever {
+  cursor: default;
+}
+
+.switch label input[type=checkbox][disabled] + .lever:after,
+.switch label input[type=checkbox][disabled]:checked + .lever:after {
+  background-color: $input-disabled-solid-color;
+}

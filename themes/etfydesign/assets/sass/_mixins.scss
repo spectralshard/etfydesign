@@ -1,0 +1,37 @@
+@mixin panel-variant($border, $heading-text-color, $heading-bg-color, $heading-border) {
+  border-color: $border;
+
+  & > .panel-heading {
+    color: $heading-text-color;
+    background-color: $heading-bg-color;
+    border-color: $heading-border;
+
+    + .panel-collapse > .panel-body {
+      border-top-color: $border;
+    }
+    .badge {
+      color: $heading-bg-color;
+      background-color: $heading-text-color;
+    }
+  }
+  & > .panel-footer {
+    + .panel-collapse > .panel-body {
+      border-bottom-color: $border;
+    }
+  }
+}
+
+@mixin label-variant($color) {
+  background-color: $color;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  font-weight: 500;
+  border-radius: 3px;
+  &[href] {
+    &:hover,
+    &:focus {
+      background-color: darken($color, 10%);
+    }
+  }
+}

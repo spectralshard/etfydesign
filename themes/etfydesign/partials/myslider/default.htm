@@ -1,0 +1,29 @@
+<div id="carousel-{{ __SELF__.id }}" class="carousel slide" data-ride="carousel">
+  {% if __SELF__.carousel.images|length > 1 %}
+  <ol class="carousel-indicators">
+    {% for i, image in __SELF__.carousel.images %}
+    <li data-target="#carousel-{{ __SELF__.id }}" data-slide-to="{{ loop.index - 1 }}"{% if loop.first %} class="active"{% endif %}></li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+
+  {% if __SELF__.carousel.images|length > 0 %}
+  <div class="carousel-inner" role="listbox">
+    {% for i, image in __SELF__.carousel.images %}
+    <div class="carousel-item {% if loop.first %} active {% endif %}">
+      <img class="d-block img-fluid" src="{{ image.path }}" alt="{{ image.title }}" >
+      {# Show caption only if there is image title or description #}
+      {% if image.title or image.description %}
+      <div class="carousel-caption">
+
+        {% if image.title %}<h1 class="h1-responsive p-5" style="font-size: 70px;text-shadow: 3px 3px #000;">{{ image.title }}</h1>{% endif %}
+
+        {% if image.description %}<p>{{ image.description }}</p>{% endif %}
+
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>

@@ -68,7 +68,7 @@ class __TwigTemplate_b0aaf00d79b1d247b3d49952d51477bbce718c5ee011ff17e03dec09fe8
                 ";
         // line 29
         $context['__cms_component_params'] = [];
-        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("localePicker"        , $context['__cms_component_params']        );
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("language"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
         // line 30
         echo "            </li>
@@ -122,7 +122,7 @@ class __TwigTemplate_b0aaf00d79b1d247b3d49952d51477bbce718c5ee011ff17e03dec09fe8
                 <a class=\"nav-link\" href=\"#\">{{ 'Contact'|_ }}</a>
             </li>
             <li class=\"nav-item\">
-                {% component 'localePicker' %}
+                {% component 'language' %}
             </li>
         </ul>
     </div>

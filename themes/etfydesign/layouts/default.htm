@@ -1,6 +1,6 @@
 description = "Default Layout"
 
-[localePicker]
+[localePicker language]
 forceUrl = 0
 ==
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ forceUrl = 0
     ]|theme }}" rel="stylesheet">
     {% styles %}
 </head>
-<body style="background-color: #0b3f5a">
+<body>
 
 <header>
     {% partial 'navbar' %}
@@ -48,7 +48,6 @@ forceUrl = 0
 'assets/vendor/tether/dist/js/tether.min.js',
 'assets/vendor/bootstrap/dist/js/bootstrap.min.js',
 ]|theme }}"></script>
-
 {% framework extras %}
 {% scripts %}
 </body>

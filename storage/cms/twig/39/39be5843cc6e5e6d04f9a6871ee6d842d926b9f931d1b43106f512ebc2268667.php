@@ -58,7 +58,7 @@ class __TwigTemplate_b2bb8877ea465ffc6b95b51a6bf5d6bab76148deaffbe36b31f000d015e
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('styles');
         // line 19
         echo "</head>
-<body style=\"background-color: #0b3f5a\">
+<body>
 
 <header>
     ";
@@ -106,19 +106,18 @@ class __TwigTemplate_b2bb8877ea465ffc6b95b51a6bf5d6bab76148deaffbe36b31f000d015e
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter(array(0 => "assets/js/scripts.js", 1 => "assets/vendor/jquery/jquery-3.2.1.min.js", 2 => "assets/vendor/popper/popper.js", 3 => "assets/vendor/tether/dist/js/tether.min.js", 4 => "assets/vendor/bootstrap/dist/js/bootstrap.min.js"));
         // line 45
         echo "\"></script>
-
 ";
-        // line 47
+        // line 46
         echo '<script src="'. Request::getBasePath()
                 .'/modules/system/assets/js/framework.js"></script>'.PHP_EOL;
         echo '<script src="'. Request::getBasePath()
                     .'/modules/system/assets/js/framework.extras.js"></script>'.PHP_EOL;
         echo '<link rel="stylesheet" property="stylesheet" href="'. Request::getBasePath()
                     .'/modules/system/assets/css/framework.extras.css">'.PHP_EOL;
-        // line 48
+        // line 47
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 49
+        // line 48
         echo "</body>";
     }
 
@@ -134,7 +133,7 @@ class __TwigTemplate_b2bb8877ea465ffc6b95b51a6bf5d6bab76148deaffbe36b31f000d015e
 
     public function getDebugInfo()
     {
-        return array (  122 => 49,  119 => 48,  112 => 47,  108 => 45,  106 => 39,  103 => 38,  94 => 36,  91 => 35,  87 => 33,  83 => 32,  78 => 29,  76 => 28,  70 => 24,  66 => 23,  60 => 19,  57 => 18,  54 => 17,  52 => 14,  48 => 13,  44 => 12,  40 => 11,  34 => 8,  30 => 7,  26 => 6,  19 => 1,);
+        return array (  121 => 48,  118 => 47,  111 => 46,  108 => 45,  106 => 39,  103 => 38,  94 => 36,  91 => 35,  87 => 33,  83 => 32,  78 => 29,  76 => 28,  70 => 24,  66 => 23,  60 => 19,  57 => 18,  54 => 17,  52 => 14,  48 => 13,  44 => 12,  40 => 11,  34 => 8,  30 => 7,  26 => 6,  19 => 1,);
     }
 
     public function getSourceContext()
@@ -158,7 +157,7 @@ class __TwigTemplate_b2bb8877ea465ffc6b95b51a6bf5d6bab76148deaffbe36b31f000d015e
     ]|theme }}\" rel=\"stylesheet\">
     {% styles %}
 </head>
-<body style=\"background-color: #0b3f5a\">
+<body>
 
 <header>
     {% partial 'navbar' %}
@@ -184,7 +183,6 @@ class __TwigTemplate_b2bb8877ea465ffc6b95b51a6bf5d6bab76148deaffbe36b31f000d015e
 'assets/vendor/tether/dist/js/tether.min.js',
 'assets/vendor/bootstrap/dist/js/bootstrap.min.js',
 ]|theme }}\"></script>
-
 {% framework extras %}
 {% scripts %}
 </body>", "/Volumes/External HD/Clients/www/etfydesign/themes/etfydesign/layouts/default.htm", "");

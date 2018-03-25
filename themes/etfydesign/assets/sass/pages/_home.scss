@@ -48,3 +48,23 @@
   }
 
 }
+
+.carousel-indicators{
+  bottom: 30px!important;
+}
+.carousel-indicators .active {
+  background-color: $primary-color;
+}
+
+.carousel-indicators li {
+  height: 5px!important;
+  width: 40px!important;
+}
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.intro {
+  margin-bottom: 0;
+  background-color: $primary-color;
+  color: $white;
+  padding: 10rem;
+}

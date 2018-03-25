@@ -1,6 +1,6 @@
-1521905774a:1:{s:11:"default.htm";a:7:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1564:"description = "Default Layout"
+1521927712a:1:{s:11:"default.htm";a:7:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1537:"description = "Default Layout"
 
-[localePicker]
+[localePicker language]
 forceUrl = 0
 ==
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ forceUrl = 0
     ]|theme }}" rel="stylesheet">
     {% styles %}
 </head>
-<body style="background-color: #0b3f5a">
+<body>
 
 <header>
     {% partial 'navbar' %}
@@ -48,10 +48,9 @@ forceUrl = 0
 'assets/vendor/tether/dist/js/tether.min.js',
 'assets/vendor/bootstrap/dist/js/bootstrap.min.js',
 ]|theme }}"></script>
-
 {% framework extras %}
 {% scripts %}
-</body>";s:5:"mtime";i:1521903451;s:6:"markup";s:1496:"<!DOCTYPE html>
+</body>";s:5:"mtime";i:1521926307;s:6:"markup";s:1460:"<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -70,7 +69,7 @@ forceUrl = 0
     ]|theme }}" rel="stylesheet">
     {% styles %}
 </head>
-<body style="background-color: #0b3f5a">
+<body>
 
 <header>
     {% partial 'navbar' %}
@@ -96,7 +95,6 @@ forceUrl = 0
 'assets/vendor/tether/dist/js/tether.min.js',
 'assets/vendor/bootstrap/dist/js/bootstrap.min.js',
 ]|theme }}"></script>
-
 {% framework extras %}
 {% scripts %}
-</body>";s:4:"code";N;s:11:"description";s:14:"Default Layout";s:12:"localePicker";a:1:{s:8:"forceUrl";s:1:"0";}}}
+</body>";s:4:"code";N;s:11:"description";s:14:"Default Layout";s:21:"localePicker language";a:1:{s:8:"forceUrl";s:1:"0";}}}

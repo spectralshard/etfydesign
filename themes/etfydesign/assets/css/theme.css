@@ -10445,6 +10445,25 @@ Colors
     height: 600px; }
     .home-cover .cover-image .form-search-content {
       margin-top: 200px; } }
+.carousel-indicators {
+  bottom: 30px !important; }
+
+.carousel-indicators .active {
+  background-color: #712D91; }
+
+.carousel-indicators li {
+  height: 5px !important;
+  width: 40px !important; }
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05); }
+
+.intro {
+  margin-bottom: 0;
+  background-color: #712D91;
+  color: #ffffff;
+  padding: 10rem; }
+
 /*
  General CSS tricks
 */

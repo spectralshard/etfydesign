@@ -10425,6 +10425,9 @@ Colors
 
 /*** SideNav ***/
 /*** Forms ***/
+.text-shadow {
+  text-shadow: 3px 3px #000; }
+
 @media (max-width: 575px) {
   .home-cover .cover-image {
     height: 200px; }

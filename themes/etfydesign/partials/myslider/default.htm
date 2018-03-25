@@ -14,11 +14,11 @@
       <img class="d-block img-fluid" src="{{ image.path }}" alt="{{ image.title }}" >
       {# Show caption only if there is image title or description #}
       {% if image.title or image.description %}
-      <div class="carousel-caption">
+      <div class="carousel-caption p-5">
 
-        {% if image.title %}<h1 class="h1-responsive p-5" style="font-size: 70px;text-shadow: 3px 3px #000;">{{ image.title }}</h1>{% endif %}
+        {% if image.title %}<h2 class="h2-responsive text-shadow" style="font-size: 70px">{{ image.title }}</h2>{% endif %}
 
-        {% if image.description %}<p>{{ image.description }}</p>{% endif %}
+        {% if image.description %}<h3 class="h3-responsive text-shadow">{{ image.description }}</h3>{% endif %}
 
       </div>
       {% endif %}

@@ -10,62 +10,57 @@ id = 1
 
 <section class="intro text-center">
     <div class="container">
-        {% content 'intro.htm' %}
-        </p>
+        <div class="row">
+            <div class="col">
+        <h1 class="h1-responsive">
+            {{ 'Welcome to our website!'|_ }}
+            <br/>
+            {{ 'where the costume creation becomes a reality.'|_ }}
+        </h1>
+            </div>
+        </div>
     </div>
 </section>
 
-<div class="album py-5 bg-light">
+<section class="about">
     <div class="container">
-
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                        </div>
-                    </div>
-                </div>
+        <div class="row align-items-center">
+            <div class="col">
             </div>
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-3">
+                <img class="d-block profile" src="{{'assets/images/profil.jpg'|theme}}">
             </div>
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                        </div>
-                    </div>
-                </div>
+            <div class="col">
             </div>
-
-
+            <div class="col-7">
+                <h2 class="h2-responsive">
+                    {{ 'Who is Etfy Design? '|_ }}
+                </h2>
+                <p>
+                    {{ 'I always had a great passion for the world of fantasy and the gaming universe of which inspired me to create costumes of video games characters.'|_ }}
+                </p>
+                <a href="#" role="button" class="btn btn-primary btn-sm">
+                    {{ 'Learn more'|_ }}
+                </a>
+            </div>
+            <div class="col">
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+<section class="text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="h2-responsive text-underline">
+                    {{ 'My latest new Projets'|_ }}
+                </h2>
+                <p>test</p>
+                <a href="#" role="button" class="btn btn-dark">
+                    {{ 'View all my projects'|_ }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

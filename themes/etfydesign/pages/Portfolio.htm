@@ -1,0 +1,30 @@
+title = "Portfolio"
+url = "/portfolio/:page?"
+layout = "default"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 99
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "portfolio/category"
+postPage = "portfolio/piece"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 1
+categoryPage = "portfolio/category"
+==
+<section>
+    <div id="container">
+        <div class="row">
+            <div class="col-sm-8">
+            {% component 'blogPosts' %}
+            </div>
+            <div class="col-sm-4">
+            {% component 'blogCategories' %}
+            </div>
+        </div>
+    </div>
+</section>

@@ -34,13 +34,13 @@ class __TwigTemplate_b0aaf00d79b1d247b3d49952d51477bbce718c5ee011ff17e03dec09fe8
     <div class=\"navbar-collapse collapse\" id=\"navbarCollapse\">
         <ul class=\"nav navbar-nav\">
             <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\"#\">";
+                <a class=\"nav-link\" href=\"portfolio\">";
         // line 13
         echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("Portfolio"));
         echo "</a>
             </li>
             <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\"#\">";
+                <a class=\"nav-link\" href=\"about\">";
         // line 16
         echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("About me"));
         echo "</a>
@@ -59,7 +59,7 @@ class __TwigTemplate_b0aaf00d79b1d247b3d49952d51477bbce718c5ee011ff17e03dec09fe8
         </ul>
         <ul class=\"nav navbar-nav\">
             <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\"#\">";
+                <a class=\"nav-link\" href=\"contact\">";
         // line 26
         echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("Contact"));
         echo "</a>
@@ -106,10 +106,10 @@ class __TwigTemplate_b0aaf00d79b1d247b3d49952d51477bbce718c5ee011ff17e03dec09fe8
     <div class=\"navbar-collapse collapse\" id=\"navbarCollapse\">
         <ul class=\"nav navbar-nav\">
             <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\"#\">{{ 'Portfolio'|_ }}</a>
+                <a class=\"nav-link\" href=\"portfolio\">{{ 'Portfolio'|_ }}</a>
             </li>
             <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\"#\">{{ 'About me'|_ }}</a>
+                <a class=\"nav-link\" href=\"about\">{{ 'About me'|_ }}</a>
             </li>
         </ul>
         <ul class=\"nav navbar-nav mx-auto d-none d-sm-none d-md-block\">
@@ -119,7 +119,7 @@ class __TwigTemplate_b0aaf00d79b1d247b3d49952d51477bbce718c5ee011ff17e03dec09fe8
         </ul>
         <ul class=\"nav navbar-nav\">
             <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\"#\">{{ 'Contact'|_ }}</a>
+                <a class=\"nav-link\" href=\"contact\">{{ 'Contact'|_ }}</a>
             </li>
             <li class=\"nav-item\">
                 {% component 'language' %}

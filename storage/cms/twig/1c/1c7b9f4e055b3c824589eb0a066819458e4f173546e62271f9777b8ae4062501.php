@@ -23,157 +23,84 @@ class __TwigTemplate_c95d4eb3021a5825f10cb438801f1aee7e00bc85b2b1f32f3c639968780
         echo "
 <section class=\"intro text-center\">
     <div class=\"container\">
-        <h1 class=\"jumbotron-heading h1-responsive\">Bienvenue sur la page d’Etfy Design :
-            <br/>
-            là où le costume passe du papier à la réalité.</h1>
-        </p>
-    </div>
-</section>
-
-<div class=\"album py-5 bg-light\">
-    <div class=\"container\">
-
         <div class=\"row\">
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\" alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\" alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\" alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\"  alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\" alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\" alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\" alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\" alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\" alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
+            <div class=\"col\">
+        <h1 class=\"h1-responsive\">
+            ";
+        // line 8
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("Welcome to our website!"));
+        echo "
+            <br/>
+            ";
+        // line 10
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("where the costume creation becomes a reality."));
+        echo "
+        </h1>
             </div>
         </div>
     </div>
-</div>";
+</section>
+
+<section class=\"about\">
+    <div class=\"container\">
+        <div class=\"row align-items-center\">
+            <div class=\"col\">
+            </div>
+            <div class=\"col-3\">
+                <img class=\"d-block profile\" src=\"";
+        // line 23
+        echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/images/profil.jpg");
+        echo "\">
+            </div>
+            <div class=\"col\">
+            </div>
+            <div class=\"col-7\">
+                <h2 class=\"h2-responsive\">
+                    ";
+        // line 29
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("Who is Etfy Design? "));
+        echo "
+                </h2>
+                <p>
+                    ";
+        // line 32
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("I always had a great passion for the world of fantasy and the gaming universe of which inspired me to create costumes of video games characters."));
+        echo "
+                </p>
+                <a href=\"#\" role=\"button\" class=\"btn btn-primary btn-sm\">
+                    ";
+        // line 35
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("Learn more"));
+        echo "
+                </a>
+            </div>
+            <div class=\"col\">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class=\"text-center\">
+    <div class=\"container\">
+        <div class=\"row\">
+            <div class=\"col-12\">
+                <h2 class=\"h2-responsive text-underline\">
+                    ";
+        // line 49
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("My latest new Projets"));
+        echo "
+                </h2>
+                <p>test</p>
+                <a href=\"#\" role=\"button\" class=\"btn btn-dark\">
+                    ";
+        // line 53
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("View all my projects"));
+        echo "
+                </a>
+            </div>
+        </div>
+    </div>
+</section>";
     }
 
     public function getTemplateName()
@@ -188,7 +115,7 @@ class __TwigTemplate_c95d4eb3021a5825f10cb438801f1aee7e00bc85b2b1f32f3c639968780
 
     public function getDebugInfo()
     {
-        return array (  23 => 2,  19 => 1,);
+        return array (  97 => 53,  90 => 49,  73 => 35,  67 => 32,  61 => 29,  52 => 23,  36 => 10,  31 => 8,  23 => 2,  19 => 1,);
     }
 
     public function getSourceContext()
@@ -197,156 +124,59 @@ class __TwigTemplate_c95d4eb3021a5825f10cb438801f1aee7e00bc85b2b1f32f3c639968780
 
 <section class=\"intro text-center\">
     <div class=\"container\">
-        <h1 class=\"jumbotron-heading h1-responsive\">Bienvenue sur la page d’Etfy Design :
-            <br/>
-            là où le costume passe du papier à la réalité.</h1>
-        </p>
-    </div>
-</section>
-
-<div class=\"album py-5 bg-light\">
-    <div class=\"container\">
-
         <div class=\"row\">
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\" alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\" alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\" alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\"  alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\" alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\" alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\" alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\" alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=\"col-md-4\">
-                <div class=\"card mb-4 box-shadow\">
-                    <img class=\"card-img-top\" alt=\"Card image cap\">
-                    <div class=\"card-body\">
-                        <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class=\"d-flex justify-content-between align-items-center\">
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">View</button>
-                                <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Edit</button>
-                            </div>
-                            <small class=\"text-muted\">9 mins</small>
-                        </div>
-                    </div>
-                </div>
+            <div class=\"col\">
+        <h1 class=\"h1-responsive\">
+            {{ 'Welcome to our website!'|_ }}
+            <br/>
+            {{ 'where the costume creation becomes a reality.'|_ }}
+        </h1>
             </div>
         </div>
     </div>
-</div>", "/Volumes/External HD/Clients/www/etfydesign/themes/etfydesign/pages/home.htm", "");
+</section>
+
+<section class=\"about\">
+    <div class=\"container\">
+        <div class=\"row align-items-center\">
+            <div class=\"col\">
+            </div>
+            <div class=\"col-3\">
+                <img class=\"d-block profile\" src=\"{{'assets/images/profil.jpg'|theme}}\">
+            </div>
+            <div class=\"col\">
+            </div>
+            <div class=\"col-7\">
+                <h2 class=\"h2-responsive\">
+                    {{ 'Who is Etfy Design? '|_ }}
+                </h2>
+                <p>
+                    {{ 'I always had a great passion for the world of fantasy and the gaming universe of which inspired me to create costumes of video games characters.'|_ }}
+                </p>
+                <a href=\"#\" role=\"button\" class=\"btn btn-primary btn-sm\">
+                    {{ 'Learn more'|_ }}
+                </a>
+            </div>
+            <div class=\"col\">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class=\"text-center\">
+    <div class=\"container\">
+        <div class=\"row\">
+            <div class=\"col-12\">
+                <h2 class=\"h2-responsive text-underline\">
+                    {{ 'My latest new Projets'|_ }}
+                </h2>
+                <p>test</p>
+                <a href=\"#\" role=\"button\" class=\"btn btn-dark\">
+                    {{ 'View all my projects'|_ }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>", "/Volumes/External HD/Clients/www/etfydesign/themes/etfydesign/pages/home.htm", "");
     }
 }

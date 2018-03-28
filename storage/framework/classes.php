@@ -56,4 +56,5 @@
   'Zainab\\SimpleContact\\Components\\SimpleContact' => 'plugins/zainab/simplecontact/components/SimpleContact.php',
   'romanov\\clearcachewidget\\Plugin' => 'plugins/romanov/clearcachewidget/Plugin.php',
   'Romanov\\ClearCacheWidget\\ReportWidgets\\ClearCache' => 'plugins/romanov/clearcachewidget/reportwidgets/ClearCache.php',
+  'rainlab\\blog\\Controllers\\categories' => 'plugins/rainlab/blog/controllers/categories.php',
 );

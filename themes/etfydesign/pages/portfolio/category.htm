@@ -1,0 +1,49 @@
+title = "Portfolio Category"
+url = "/portfolio/category/:slug/:page?"
+layout = "default"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = ":slug"
+postsPerPage = 99
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "portfolio/category"
+postPage = "portfolio/piece"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 1
+categoryPage = "portfolio/category"
+
+[viewBag]
+localeUrl[fr] = "/portfolio-category"
+==
+<?php
+function onEnd()
+{
+    // Optional - set the page title to the category name
+    if ($this->category)
+        $this->page->title = $this->category->name;
+}
+?>
+==
+<section>
+    <div id="container">
+        <div class="row">
+            <div class="col-sm-8">
+            {% if not category %}
+    <h2>Category not found</h2>
+{% else %}
+    <h2>{{ category.name }}</h2>
+
+    {% component 'blogPosts' %}
+{% endif %}
+            </div>
+            <div class="col-sm-4">
+            {% component 'blogCategories' %}
+            </div>
+        </div>
+    </div>
+</section>

@@ -10428,6 +10428,10 @@ Colors
 .text-shadow {
   text-shadow: 3px 3px #000; }
 
+.text-underline {
+  border-bottom: 1px solid;
+  padding-bottom: 15px; }
+
 @media (max-width: 575px) {
   .home-cover .cover-image {
     height: 200px; }
@@ -10461,11 +10465,27 @@ Colors
 .box-shadow {
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05); }
 
+section {
+  padding-top: 10rem;
+  padding-bottom: 10rem; }
+
 .intro {
   margin-bottom: 0;
   background-color: #712D91;
+  color: #ffffff; }
+
+.about {
+  padding: 0rem;
   color: #ffffff;
-  padding: 10rem; }
+  display: block;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.09);
+  background: url("../images/dark-triangles.png");
+  background-repeat: repeat; }
+
+.profile {
+  margin-top: -50px;
+  margin-bottom: -50px; }
 
 /*
  General CSS tricks
@@ -10706,6 +10726,19 @@ a {
   border: none !important;
   background-color: transparent;
   color: #712D91; }
+
+.btn-primary {
+  background-color: #712D91 !important;
+  border-color: #712D91 !important; }
+
+.btn-primary:hover {
+  background-color: #5E0591 !important;
+  border-color: #5E0591 !important; }
+
+#footer {
+  background-color: #000000;
+  padding-top: 2rem;
+  padding-bottom: 1rem; }
 
 .ui-front {
   z-index: 9999 !important; }

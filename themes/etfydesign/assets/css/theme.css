@@ -10487,11 +10487,43 @@ section {
   margin-top: -50px;
   margin-bottom: -50px; }
 
+#contact {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/contact-bg.jpg");
+  min-height: 800px; }
+
+#contact h1 {
+  font-size: 5rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center; }
+
+.alert-primary {
+  color: #712D91;
+  background-color: #d3bddf;
+  border-color: #806991; }
+
+.alert-primary hr {
+  border-top-color: #806991; }
+
+.alert-primary .alert-link {
+  color: #530191; }
+
+.form-control {
+  border-color: #712D91;
+  resize: none; }
+
 /*
  General CSS tricks
 */
 body {
-  font-family: 'Overpass', sans-serif !important; }
+  font-family: 'Overpass', sans-serif !important;
+  background: #ECECEC; }
 
 ol, li {
   margin: 0;

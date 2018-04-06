@@ -6,29 +6,29 @@
 
 
     <div class="form-group">
-        <label for="name">{{__SELF__.properties.nameLabel}}</label>
+        <label for="name">{{ __SELF__.properties.nameLabel|_ }}</label>
         <input type="text" id="name" name="name" class="form-control" required >
     </div>
 
     <div class="form-group">
-        <label for="email">{{__SELF__.properties.emailLabel}}</label>
+        <label for="email">{{ __SELF__.properties.emailLabel|_ }}</label>
         <input type="email" id="email" name="email" class="form-control" required >
     </div>
 
     {% if(__SELF__.properties.phoneEnabled) %}
         <div class="form-group">
-            <label for="phone">{{__SELF__.properties.phoneLabel}}</label>
+            <label for="phone">{{ __SELF__.properties.phoneLabel|_ }}</label>
             <input type="text" id="phone" name="phone" class="form-control" required>
         </div>
     {% endif %}
 
     <div class="form-group">
-        <label for="subject">{{__SELF__.properties.subjectLabel}}</label>
+        <label for="subject">{{ __SELF__.properties.subjectLabel|_ }}</label>
         <input type="text" id="subject" name="subject" class="form-control" required>
     </div>
 
     <div class="form-group">
-        <label for="message">{{__SELF__.properties.messageLabel}}</label>
+        <label for="message">{{ __SELF__.properties.messageLabel|_ }}</label>
         <textarea style="height:150px" id="message" name="message" class="form-control" required></textarea>
     </div>
 
@@ -43,7 +43,7 @@
 
     <button id="simpleContactSubmitButton"
             type="submit" class="btn btn-primary float-right mt-4">
-        {{__SELF__.properties.buttonText}}
+        {{'Send'|_ }}
     </button>
 
 </form>

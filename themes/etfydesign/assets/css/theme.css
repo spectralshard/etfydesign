@@ -10518,6 +10518,15 @@ section {
   border-color: #712D91;
   resize: none; }
 
+#about {
+  padding: 15rem;
+  color: #ffffff;
+  display: block;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.09);
+  background: url("../images/dark-triangles.png");
+  background-repeat: repeat; }
+
 /*
  General CSS tricks
 */

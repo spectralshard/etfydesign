@@ -1,0 +1,66 @@
+title = "Catégories"
+url = "/blogue/categorie/:slug/:page?"
+layout = "default"
+is_hidden = 0
+
+[blogPosts blogs]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/categories"
+postPage = "blog/article"
+
+[blogCategories listcategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/categories"
+==
+<?php
+function onEnd()
+{
+    // Optional - set the page title to the category name
+    if ($this->category)
+        $this->page->title = $this->category->name;
+}
+?>
+==
+<div class="page-blog-list wrap-page">
+    <div id="header-contact" class="section-header">
+        <div class="jumbotron">
+            <div class="container">
+                <h1>{{ category.name }}</h1>
+            </div>
+        </div>
+    </div>
+    <section class="default-section">
+        <div class="container">
+            <div class="row top-buffer-lg">
+                <div class="col-sm-9">
+
+                    {% component 'blogs' %}
+                </div>
+                <div class="col-sm-3">
+
+                    <div class="row all-top-buffer">
+                        <div class="col-sm-12">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title text-center">
+                                        <i class="fa fa-folder"></i>&nbsp;
+                                        Catégories
+                                    </h3>
+                                </div>
+
+                                {% component 'listcategories' %}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

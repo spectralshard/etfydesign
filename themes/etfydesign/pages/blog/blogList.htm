@@ -1,0 +1,31 @@
+title = "Blogue"
+url = "/blogue/:page?"
+layout = "default"
+meta_title = "Le blogue d'Alliance Éducation"
+is_hidden = 0
+
+[blogPosts blogs]
+pageNumber = "{{ :page }}"
+postsPerPage = 999
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/categories"
+postPage = "blog/article"
+
+[blogCategories listcategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/categories"
+==
+<section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                <h1 class="h1-responsive text-center text-primary text-underline">Portfolio</h1>
+                </div>
+            </div>
+
+                {% component 'blogs' %}
+
+        </div>
+    </section>

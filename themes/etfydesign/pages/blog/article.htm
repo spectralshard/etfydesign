@@ -1,0 +1,48 @@
+title = "Article"
+url = "/blogue/article/:slug"
+layout = "default"
+is_hidden = 0
+
+[blogPost article]
+slug = "{{ :slug }}"
+categoryPage = "about"
+
+==
+<?php
+function onEnd()
+{
+    // Optional - set the page title to the post title
+    if ($this->post)
+    $this->page->title = $this->post->title;
+}
+?>
+==
+<section id="blog">
+    <div class="container">
+        <div class="row">
+        <div class="col-12">
+            {% for category in post.categories %}
+            <h6 class="h6-responsive text-center" style="color: #5a5a5a"><em>{{ category.name }}</em></h6>
+            {% if not loop.last %}, {% endif %}
+            {% endfor %}
+            <h1 class="h1-responsive text-primary text-underline text-center">{{ post.title }}</h1>
+            </div>
+
+                    <div class="col-12">
+                    {% if post %}
+                        {% partial 'share' %}
+                        {% component 'article' %}
+
+                    {% else %}
+                        <h2>Sujet introuvable</h2>
+                    {% endif %}
+                    </div>
+        </div>
+    </div>
+                <div class="col-12 text-center mt-5">
+                    <a href="{{ 'blog/blogList'|page }}" role="button" class="btn btn-dark">
+                        {{ 'View all my projects'|_ }}
+                    </a>
+                </div>
+
+</section>

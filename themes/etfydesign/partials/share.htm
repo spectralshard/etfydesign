@@ -1,0 +1,32 @@
+
+<div class="row">
+    <div class="col">
+        <p style="display: inline-block">
+            <strong>{{ 'Share on'|_ }}</strong>
+        </p>&nbsp;&nbsp;
+        <a class=""
+           style="color: #fff;padding: 6px 4px 3px 12px;display: inline-block;background-color: #526895; text-align: center;"
+           target="_blank"
+           href="https://www.facebook.com/sharer.php?u={{ url|url_encode }}">
+            <i class="fa fa-facebook" style="font-size: 1.2rem;"> </i>
+            &nbsp;&nbsp;<span style="font-size: 0.875rem;">{{ facebookShares }}</span>
+        </a>
+
+
+        <a class=""
+           style="color: #fff;padding: 6px 4px 3px 12px;display: inline-block;background-color: #8dcbf1;"
+           target="_blank"
+           href="http://twitter.com/share?url={{ url }}">
+            <i class="fa fa-twitter" style="font-size: 1.2rem;"> </i>
+            <span style="font-size: 0.875rem;">&nbsp;</span> </a>
+
+
+        <a class=""
+           style="color: #fff;padding: 6px 4px 3px 12px;display: inline-block;background-color: #429bcc;"
+           target="_blank"
+           href="https://www.linkedin.com/shareArticle?mini=true&url={{ url|url_encode }}&title={{ title }}">
+            <i class="fa fa-linkedin" style="font-size: 1.2rem;"> </i>
+            <span style="font-size: 0.875rem;">&nbsp;</span>
+        </a>
+    </div>
+</div>

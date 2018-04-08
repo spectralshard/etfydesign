@@ -10466,8 +10466,8 @@ Colors
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05); }
 
 section {
-  padding-top: 10rem;
-  padding-bottom: 10rem; }
+  padding-top: 6rem;
+  padding-bottom: 6rem; }
 
 .intro {
   margin-bottom: 0;
@@ -10564,7 +10564,7 @@ section {
   color: #ffffff !important; }
 
 #about {
-  padding: 15rem 2rem;
+  padding: 10rem 2rem;
   color: #ffffff;
   display: block;
   position: relative;

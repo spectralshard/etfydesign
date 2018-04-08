@@ -1,4 +1,4 @@
-1522374133a:1:{s:10:"navbar.htm";a:6:{s:8:"fileName";s:10:"navbar.htm";s:7:"content";s:1578:"description = "Navbar"
+1523202030a:1:{s:10:"navbar.htm";a:6:{s:8:"fileName";s:10:"navbar.htm";s:7:"content";s:1629:"description = "Navbar"
 ==
 <nav class="navbar navbar-expand-md fixed-top navbar-light">
     <a href="{{ 'home'|page }}" class="navbar-brand d-flex w-50 mr-auto d-block d-md-none">
@@ -12,10 +12,10 @@
     <div class="navbar-collapse collapse" id="navbarCollapse">
         <ul class="nav navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="portfolio">{{ 'Portfolio'|_ }}</a>
+                <a class="nav-link" href="{{ 'blog/blogList'|page }}">{{ 'Portfolio'|_ }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="about">{{ 'About me'|_ }}</a>
+                <a class="nav-link" href="{{ 'about'|page }}">{{ 'About me'|_ }}</a>
             </li>
         </ul>
         <ul class="nav navbar-nav mx-auto d-none d-sm-none d-md-block">
@@ -25,14 +25,14 @@
         </ul>
         <ul class="nav navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="contact">{{ 'Contact'|_ }}</a>
+                <a class="nav-link" href="{{ 'contact'|page }}">{{ 'Contact'|_ }}</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-auto">
                 {% component 'language' %}
             </li>
         </ul>
     </div>
-</nav>";s:5:"mtime";i:1522198878;s:6:"markup";s:1550:"<nav class="navbar navbar-expand-md fixed-top navbar-light">
+</nav>";s:5:"mtime";i:1523201429;s:6:"markup";s:1601:"<nav class="navbar navbar-expand-md fixed-top navbar-light">
     <a href="{{ 'home'|page }}" class="navbar-brand d-flex w-50 mr-auto d-block d-md-none">
         <img src="{{ 'assets/images/etfydesign-logo.svg'|theme }}" title="Etfy Design Logo" class="img-fluid" style="width: 150px; height: 60px">
     </a>
@@ -44,10 +44,10 @@
     <div class="navbar-collapse collapse" id="navbarCollapse">
         <ul class="nav navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="portfolio">{{ 'Portfolio'|_ }}</a>
+                <a class="nav-link" href="{{ 'blog/blogList'|page }}">{{ 'Portfolio'|_ }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="about">{{ 'About me'|_ }}</a>
+                <a class="nav-link" href="{{ 'about'|page }}">{{ 'About me'|_ }}</a>
             </li>
         </ul>
         <ul class="nav navbar-nav mx-auto d-none d-sm-none d-md-block">
@@ -57,9 +57,9 @@
         </ul>
         <ul class="nav navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="contact">{{ 'Contact'|_ }}</a>
+                <a class="nav-link" href="{{ 'contact'|page }}">{{ 'Contact'|_ }}</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-auto">
                 {% component 'language' %}
             </li>
         </ul>

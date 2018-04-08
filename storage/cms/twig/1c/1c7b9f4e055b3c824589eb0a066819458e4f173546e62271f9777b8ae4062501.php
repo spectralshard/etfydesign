@@ -44,18 +44,18 @@ class __TwigTemplate_c95d4eb3021a5825f10cb438801f1aee7e00bc85b2b1f32f3c639968780
 <section class=\"about\">
     <div class=\"container\">
         <div class=\"row align-items-center\">
-            <div class=\"col\">
+            <div class=\"col d-none d-lg-block d-xl-block\">
             </div>
-            <div class=\"col-3\">
-                <img class=\"d-block profile\" src=\"";
+            <div class=\"col-lg-3 col-md-5 col-sm-7 pb-2\">
+                <img class=\"d-block profile mx-auto\" src=\"";
         // line 23
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/images/profil.jpg");
         echo "\">
             </div>
-            <div class=\"col\">
+            <div class=\"col d-none d-lg-block d-xl-block\">
             </div>
-            <div class=\"col-7\">
-                <h2 class=\"h2-responsive\">
+            <div class=\"col-md-7 pt-5 pb-5\">
+                <h2 class=\"h2-responsive pt-3\">
                     ";
         // line 29
         echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("Who is Etfy Design? "));
@@ -67,40 +67,27 @@ class __TwigTemplate_c95d4eb3021a5825f10cb438801f1aee7e00bc85b2b1f32f3c639968780
         echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("I always had a great passion for the world of fantasy and the gaming universe of which inspired me to create costumes of video games characters."));
         echo "
                 </p>
-                <a href=\"#\" role=\"button\" class=\"btn btn-primary btn-sm\">
-                    ";
+                <span class=\"pb-3\">
+                <a href=\"";
         // line 35
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFilter("about");
+        echo "\" role=\"button\" class=\"btn btn-primary btn-sm\">
+                    ";
+        // line 36
         echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("Learn more"));
         echo "
-                </a>
+                </a></span>
             </div>
-            <div class=\"col\">
+            <div class=\"col d-none d-lg-block d-xl-block\">
             </div>
         </div>
     </div>
 </section>
-
-<section class=\"text-center\">
-    <div class=\"container\">
-        <div class=\"row\">
-            <div class=\"col-12\">
-                <h2 class=\"h2-responsive text-underline\">
-                    ";
-        // line 49
-        echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("My latest new Projets"));
-        echo "
-                </h2>
-                <p>test</p>
-                <a href=\"#\" role=\"button\" class=\"btn btn-dark\">
-                    ";
-        // line 53
-        echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("View all my projects"));
-        echo "
-                </a>
-            </div>
-        </div>
-    </div>
-</section>";
+";
+        // line 44
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("lastprojects"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
     }
 
     public function getTemplateName()
@@ -115,7 +102,7 @@ class __TwigTemplate_c95d4eb3021a5825f10cb438801f1aee7e00bc85b2b1f32f3c639968780
 
     public function getDebugInfo()
     {
-        return array (  97 => 53,  90 => 49,  73 => 35,  67 => 32,  61 => 29,  52 => 23,  36 => 10,  31 => 8,  23 => 2,  19 => 1,);
+        return array (  88 => 44,  77 => 36,  73 => 35,  67 => 32,  61 => 29,  52 => 23,  36 => 10,  31 => 8,  23 => 2,  19 => 1,);
     }
 
     public function getSourceContext()
@@ -139,44 +126,30 @@ class __TwigTemplate_c95d4eb3021a5825f10cb438801f1aee7e00bc85b2b1f32f3c639968780
 <section class=\"about\">
     <div class=\"container\">
         <div class=\"row align-items-center\">
-            <div class=\"col\">
+            <div class=\"col d-none d-lg-block d-xl-block\">
             </div>
-            <div class=\"col-3\">
-                <img class=\"d-block profile\" src=\"{{'assets/images/profil.jpg'|theme}}\">
+            <div class=\"col-lg-3 col-md-5 col-sm-7 pb-2\">
+                <img class=\"d-block profile mx-auto\" src=\"{{'assets/images/profil.jpg'|theme}}\">
             </div>
-            <div class=\"col\">
+            <div class=\"col d-none d-lg-block d-xl-block\">
             </div>
-            <div class=\"col-7\">
-                <h2 class=\"h2-responsive\">
+            <div class=\"col-md-7 pt-5 pb-5\">
+                <h2 class=\"h2-responsive pt-3\">
                     {{ 'Who is Etfy Design? '|_ }}
                 </h2>
                 <p>
                     {{ 'I always had a great passion for the world of fantasy and the gaming universe of which inspired me to create costumes of video games characters.'|_ }}
                 </p>
-                <a href=\"#\" role=\"button\" class=\"btn btn-primary btn-sm\">
+                <span class=\"pb-3\">
+                <a href=\"{{ 'about'|page }}\" role=\"button\" class=\"btn btn-primary btn-sm\">
                     {{ 'Learn more'|_ }}
-                </a>
+                </a></span>
             </div>
-            <div class=\"col\">
+            <div class=\"col d-none d-lg-block d-xl-block\">
             </div>
         </div>
     </div>
 </section>
-
-<section class=\"text-center\">
-    <div class=\"container\">
-        <div class=\"row\">
-            <div class=\"col-12\">
-                <h2 class=\"h2-responsive text-underline\">
-                    {{ 'My latest new Projets'|_ }}
-                </h2>
-                <p>test</p>
-                <a href=\"#\" role=\"button\" class=\"btn btn-dark\">
-                    {{ 'View all my projects'|_ }}
-                </a>
-            </div>
-        </div>
-    </div>
-</section>", "/Volumes/External HD/Clients/www/etfydesign/themes/etfydesign/pages/home.htm", "");
+{% partial 'lastprojects' %}", "/Volumes/External HD/Clients/www/etfydesign/themes/etfydesign/pages/home.htm", "");
     }
 }

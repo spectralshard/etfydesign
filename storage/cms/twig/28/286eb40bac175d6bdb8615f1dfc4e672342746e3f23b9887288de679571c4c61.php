@@ -34,14 +34,18 @@ class __TwigTemplate_b0aaf00d79b1d247b3d49952d51477bbce718c5ee011ff17e03dec09fe8
     <div class=\"navbar-collapse collapse\" id=\"navbarCollapse\">
         <ul class=\"nav navbar-nav\">
             <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\"portfolio\">";
+                <a class=\"nav-link\" href=\"";
         // line 13
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFilter("blog/blogList");
+        echo "\">";
         echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("Portfolio"));
         echo "</a>
             </li>
             <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\"about\">";
+                <a class=\"nav-link\" href=\"";
         // line 16
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFilter("about");
+        echo "\">";
         echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("About me"));
         echo "</a>
             </li>
@@ -59,12 +63,14 @@ class __TwigTemplate_b0aaf00d79b1d247b3d49952d51477bbce718c5ee011ff17e03dec09fe8
         </ul>
         <ul class=\"nav navbar-nav\">
             <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\"contact\">";
+                <a class=\"nav-link\" href=\"";
         // line 26
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFilter("contact");
+        echo "\">";
         echo call_user_func_array($this->env->getFilter('_')->getCallable(), array("Contact"));
         echo "</a>
             </li>
-            <li class=\"nav-item\">
+            <li class=\"nav-item mx-auto\">
                 ";
         // line 29
         $context['__cms_component_params'] = [];
@@ -89,7 +95,7 @@ class __TwigTemplate_b0aaf00d79b1d247b3d49952d51477bbce718c5ee011ff17e03dec09fe8
 
     public function getDebugInfo()
     {
-        return array (  74 => 30,  70 => 29,  64 => 26,  56 => 21,  52 => 20,  45 => 16,  39 => 13,  26 => 3,  22 => 2,  19 => 1,);
+        return array (  80 => 30,  76 => 29,  68 => 26,  60 => 21,  56 => 20,  47 => 16,  39 => 13,  26 => 3,  22 => 2,  19 => 1,);
     }
 
     public function getSourceContext()
@@ -106,10 +112,10 @@ class __TwigTemplate_b0aaf00d79b1d247b3d49952d51477bbce718c5ee011ff17e03dec09fe8
     <div class=\"navbar-collapse collapse\" id=\"navbarCollapse\">
         <ul class=\"nav navbar-nav\">
             <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\"portfolio\">{{ 'Portfolio'|_ }}</a>
+                <a class=\"nav-link\" href=\"{{ 'blog/blogList'|page }}\">{{ 'Portfolio'|_ }}</a>
             </li>
             <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\"about\">{{ 'About me'|_ }}</a>
+                <a class=\"nav-link\" href=\"{{ 'about'|page }}\">{{ 'About me'|_ }}</a>
             </li>
         </ul>
         <ul class=\"nav navbar-nav mx-auto d-none d-sm-none d-md-block\">
@@ -119,9 +125,9 @@ class __TwigTemplate_b0aaf00d79b1d247b3d49952d51477bbce718c5ee011ff17e03dec09fe8
         </ul>
         <ul class=\"nav navbar-nav\">
             <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\"contact\">{{ 'Contact'|_ }}</a>
+                <a class=\"nav-link\" href=\"{{ 'contact'|page }}\">{{ 'Contact'|_ }}</a>
             </li>
-            <li class=\"nav-item\">
+            <li class=\"nav-item mx-auto\">
                 {% component 'language' %}
             </li>
         </ul>

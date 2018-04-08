@@ -1,4 +1,4 @@
-1522374133a:1:{s:8:"home.htm";a:10:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:1949:"title = "Home"
+1523201953a:1:{s:8:"home.htm";a:10:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:1695:"title = "Home"
 url = "/"
 layout = "default"
 is_hidden = 0
@@ -25,45 +25,32 @@ id = 1
 <section class="about">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col">
+            <div class="col d-none d-lg-block d-xl-block">
             </div>
-            <div class="col-3">
-                <img class="d-block profile" src="{{'assets/images/profil.jpg'|theme}}">
+            <div class="col-lg-3 col-md-5 col-sm-7 pb-2">
+                <img class="d-block profile mx-auto" src="{{'assets/images/profil.jpg'|theme}}">
             </div>
-            <div class="col">
+            <div class="col d-none d-lg-block d-xl-block">
             </div>
-            <div class="col-7">
-                <h2 class="h2-responsive">
+            <div class="col-md-7 pt-5 pb-5">
+                <h2 class="h2-responsive pt-3">
                     {{ 'Who is Etfy Design? '|_ }}
                 </h2>
                 <p>
                     {{ 'I always had a great passion for the world of fantasy and the gaming universe of which inspired me to create costumes of video games characters.'|_ }}
                 </p>
-                <a href="#" role="button" class="btn btn-primary btn-sm">
+                <span class="pb-3">
+                <a href="{{ 'about'|page }}" role="button" class="btn btn-primary btn-sm">
                     {{ 'Learn more'|_ }}
-                </a>
+                </a></span>
             </div>
-            <div class="col">
+            <div class="col d-none d-lg-block d-xl-block">
             </div>
         </div>
     </div>
 </section>
-
-<section class="text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="h2-responsive text-underline">
-                    {{ 'My latest new Projets'|_ }}
-                </h2>
-                <p>test</p>
-                <a href="#" role="button" class="btn btn-dark">
-                    {{ 'View all my projects'|_ }}
-                </a>
-            </div>
-        </div>
-    </div>
-</section>";s:5:"mtime";i:1522114298;s:6:"markup";s:1852:"{% component 'myslider' %}
+{% partial 'lastprojects' %}
+";s:5:"mtime";i:1523201351;s:6:"markup";s:1596:"{% component 'myslider' %}
 
 <section class="intro text-center">
     <div class="container">
@@ -82,42 +69,28 @@ id = 1
 <section class="about">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col">
+            <div class="col d-none d-lg-block d-xl-block">
             </div>
-            <div class="col-3">
-                <img class="d-block profile" src="{{'assets/images/profil.jpg'|theme}}">
+            <div class="col-lg-3 col-md-5 col-sm-7 pb-2">
+                <img class="d-block profile mx-auto" src="{{'assets/images/profil.jpg'|theme}}">
             </div>
-            <div class="col">
+            <div class="col d-none d-lg-block d-xl-block">
             </div>
-            <div class="col-7">
-                <h2 class="h2-responsive">
+            <div class="col-md-7 pt-5 pb-5">
+                <h2 class="h2-responsive pt-3">
                     {{ 'Who is Etfy Design? '|_ }}
                 </h2>
                 <p>
                     {{ 'I always had a great passion for the world of fantasy and the gaming universe of which inspired me to create costumes of video games characters.'|_ }}
                 </p>
-                <a href="#" role="button" class="btn btn-primary btn-sm">
+                <span class="pb-3">
+                <a href="{{ 'about'|page }}" role="button" class="btn btn-primary btn-sm">
                     {{ 'Learn more'|_ }}
-                </a>
+                </a></span>
             </div>
-            <div class="col">
+            <div class="col d-none d-lg-block d-xl-block">
             </div>
         </div>
     </div>
 </section>
-
-<section class="text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="h2-responsive text-underline">
-                    {{ 'My latest new Projets'|_ }}
-                </h2>
-                <p>test</p>
-                <a href="#" role="button" class="btn btn-dark">
-                    {{ 'View all my projects'|_ }}
-                </a>
-            </div>
-        </div>
-    </div>
-</section>";s:4:"code";N;s:5:"title";s:4:"Home";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:17:"carousel myslider";a:1:{s:2:"id";s:1:"1";}}}
+{% partial 'lastprojects' %}";s:4:"code";N;s:5:"title";s:4:"Home";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:17:"carousel myslider";a:1:{s:2:"id";s:1:"1";}}}

@@ -57,4 +57,6 @@
   'romanov\\clearcachewidget\\Plugin' => 'plugins/romanov/clearcachewidget/Plugin.php',
   'Romanov\\ClearCacheWidget\\ReportWidgets\\ClearCache' => 'plugins/romanov/clearcachewidget/reportwidgets/ClearCache.php',
   'rainlab\\blog\\Controllers\\categories' => 'plugins/rainlab/blog/controllers/categories.php',
+  'RainLab\\Translate\\Classes\\ThemeScanner' => 'plugins/rainlab/translate/classes/ThemeScanner.php',
+  'system\\Controllers\\eventlogs' => 'modules/system/controllers/eventlogs.php',
 );

@@ -6,8 +6,12 @@ is_hidden = 0
 [carousel myslider]
 id = 1
 ==
+<div class="d-none d-sm-block">
 {% component 'myslider' %}
-
+</div>
+<div class="d-block d-sm-none" style="padding-top: 5rem;">
+    {% component 'myslider' %}
+</div>
 <section class="intro text-center">
     <div class="container">
         <div class="row">

@@ -1,32 +1,19 @@
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="row">
     <div class="col">
         <p style="display: inline-block">
-            <strong>{{ 'Share on'|_ }}</strong>
-        </p>&nbsp;&nbsp;
-        <a class=""
-           style="color: #fff;padding: 6px 4px 3px 12px;display: inline-block;background-color: #526895; text-align: center;"
-           target="_blank"
-           href="https://www.facebook.com/sharer.php?u={{ url|url_encode }}">
-            <i class="fa fa-facebook" style="font-size: 1.2rem;"> </i>
-            &nbsp;&nbsp;<span style="font-size: 0.875rem;">{{ facebookShares }}</span>
-        </a>
-
-
-        <a class=""
-           style="color: #fff;padding: 6px 4px 3px 12px;display: inline-block;background-color: #8dcbf1;"
-           target="_blank"
-           href="http://twitter.com/share?url={{ url }}">
-            <i class="fa fa-twitter" style="font-size: 1.2rem;"> </i>
-            <span style="font-size: 0.875rem;">&nbsp;</span> </a>
-
-
-        <a class=""
-           style="color: #fff;padding: 6px 4px 3px 12px;display: inline-block;background-color: #429bcc;"
-           target="_blank"
-           href="https://www.linkedin.com/shareArticle?mini=true&url={{ url|url_encode }}&title={{ title }}">
-            <i class="fa fa-linkedin" style="font-size: 1.2rem;"> </i>
-            <span style="font-size: 0.875rem;">&nbsp;</span>
-        </a>
+            <strong>{{ 'Share on'|_ }}</strong>&nbsp;
+        </p>
+        <div style="display: inline-block">
+        <div class="fb-share-button" data-layout="button_count" data-size="small" data-mobile-iframe="true">
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"></a></div>
+        </div>
     </div>
 </div>

@@ -8,12 +8,20 @@ forceUrl = 0
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Etfy Design - {{ this.page.title }}</title>
-    <meta name="description" content="{{ this.page.description }}">
+    <title>Etfy Design - {{ this.page.title|_ }}</title>
+    <meta name="google-site-verification" content="r9dMKr9Xx2ryKMGP6Wg20WTKsjJYjMZsa2CJxCWXRyk" />
+    <meta name="description" content="{{ this.page.description|_ }}">
     <meta name="title" content="{{ this.page.title }}">
     <meta name="author" content="Etfy Design">
+    <meta name="robots" content="index,follow">
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{{ this.page.og_image }}" />
+    <meta property="og:title" content="Etfy Design - {{ this.page.title }}" />
+    <meta property="og:url" content="{{ this.page.url }}" />
+    <meta property="og:site_name" content="Etfy Design" />
+    <meta property="og:description" content="{{ this.page.settings.meta_description }}" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="icon" type="image/jpg" href="{{ 'assets/images/favicon.jpg'|theme }}"/>
+    <link rel="icon" type="image/jpg" href="{{ 'assets/images/favicon.png'|theme }}"/>
     <link href="{{ 'assets/images/apple-touch-icon.png'|theme }}" rel="apple-touch-icon">
     <link href="{{ 'assets/images/apple-touch-icon-precomposed.png'|theme }}" rel="apple-touch-icon-precomposed">
     <link href="{{ [
@@ -50,4 +58,13 @@ forceUrl = 0
 ]|theme }}"></script>
 {% framework extras %}
 {% scripts %}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70359045-7"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-70359045-7');
+</script>
 </body>

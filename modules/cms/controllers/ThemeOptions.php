@@ -1,6 +1,5 @@
 <?php namespace Cms\Controllers;
 
-use Flash;
 use Backend;
 use BackendMenu;
 use ApplicationException;
@@ -68,7 +67,15 @@ class ThemeOptions extends Controller
     public function update_onSave($dirName = null)
     {
         $model = $this->getThemeData($this->getDirName($dirName));
-        $this->asExtension('FormController')->update_onSave($model->id);
+        $result = $this->asExtension('FormController')->update_onSave($model->id);
+
+        // Redirect close requests to the settings index when user doesn't have access
+        // to go back to the theme selection page
+        if (!$this->user->hasAccess('cms.manage_themes') && input('close')) {
+            $result = Backend::redirect('system/settings');
+        }
+
+        return $result;
     }
 
     public function update_onResetDefault($dirName = null)
@@ -86,7 +93,7 @@ class ThemeOptions extends Controller
     {
         $model = $form->model;
         $theme = $this->findThemeObject($model->theme);
-        $config = $theme->getConfigArray('form');
+        $config = $theme->getFormConfig();
 
         if ($fields = array_get($config, 'fields')) {
             $form->addFields($fields);
@@ -132,8 +139,7 @@ class ThemeOptions extends Controller
     protected function getThemeData($dirName)
     {
         $theme = $this->findThemeObject($dirName);
-        $model = ThemeData::forTheme($theme);
-        return $model;
+        return ThemeData::forTheme($theme);
     }
 
     protected function findThemeObject($name = null)

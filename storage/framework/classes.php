@@ -59,4 +59,11 @@
   'rainlab\\blog\\Controllers\\categories' => 'plugins/rainlab/blog/controllers/categories.php',
   'RainLab\\Translate\\Classes\\ThemeScanner' => 'plugins/rainlab/translate/classes/ThemeScanner.php',
   'system\\Controllers\\eventlogs' => 'modules/system/controllers/eventlogs.php',
+  'panakour\\backup\\Plugin' => 'plugins/panakour/backup/Plugin.php',
+  'Panakour\\Backup\\Models\\Settings' => 'plugins/panakour/backup/models/Settings.php',
+  'PanaKour\\Backup\\DropboxServiceProvider' => 'plugins/panakour/backup/DropboxServiceProvider.php',
+  'RainLab\\Translate\\Behaviors\\TranslatablePage' => 'plugins/rainlab/translate/behaviors/TranslatablePage.php',
+  'RainLab\\Blog\\Classes\\ComponentAbstract' => 'plugins/rainlab/blog/classes/ComponentAbstract.php',
+  'RainLab\\Blog\\Models\\Settings' => 'plugins/rainlab/blog/models/Settings.php',
+  'Zainab\\SimpleContact\\Classes\\ZHelper' => 'plugins/zainab/simplecontact/classes/ZHelper.php',
 );

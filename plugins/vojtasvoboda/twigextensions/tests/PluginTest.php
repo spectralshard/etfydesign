@@ -221,6 +221,16 @@ class PluginTest extends PluginTestCase
         $this->assertEquals($twigTemplate->render([]), '   test   ');
     }
 
+    public function testStrReplaceFunction()
+    {
+        $twig = $this->getTwig();
+
+        $template = "{{ 'test' | str_replace('test', 'tset') }}";
+
+        $twigTemplate = $twig->createTemplate($template);
+        $this->assertEquals($twigTemplate->render([]), 'tset');
+    }
+
     public function testStripTagsFunction()
     {
         $twig = $this->getTwig();
@@ -342,6 +352,19 @@ class PluginTest extends PluginTestCase
         $value = 'test value';
         Config::set($key, $value);
         $template = "{{ config('" . $key . "') }}";
+
+        $twigTemplate = $twig->createTemplate($template);
+        $this->assertEquals($twigTemplate->render([]), $value);
+    }
+
+    public function testEnvFunction()
+    {
+        $twig = $this->getTwig();
+
+        $key = 'env.custom.key';
+        $value = 'test value';
+        putenv($key.'='.$value);
+        $template = "{{ env('" . $key . "') }}";
 
         $twigTemplate = $twig->createTemplate($template);
         $this->assertEquals($twigTemplate->render([]), $value);

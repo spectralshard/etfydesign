@@ -1,10 +1,11 @@
 <?php namespace Backend\FormWidgets;
 
-use Str;
+use Db;
 use Input;
 use Request;
 use Response;
 use Validator;
+use Backend\Widgets\Form;
 use Backend\Classes\FormField;
 use Backend\Classes\FormWidgetBase;
 use Backend\Controllers\Files as FilesController;
@@ -27,6 +28,7 @@ use Exception;
  */
 class FileUpload extends FormWidgetBase
 {
+    use \Backend\Traits\FormModelSaver;
     use \Backend\Traits\FormModelWidget;
 
     //
@@ -36,17 +38,17 @@ class FileUpload extends FormWidgetBase
     /**
      * @var string Prompt text to display for the upload button.
      */
-    public $prompt = null;
+    public $prompt;
 
     /**
      * @var int Preview image width
      */
-    public $imageWidth = null;
+    public $imageWidth;
 
     /**
      * @var int Preview image height
      */
-    public $imageHeight = null;
+    public $imageHeight;
 
     /**
      * @var mixed Collection of acceptable file types.
@@ -71,6 +73,11 @@ class FileUpload extends FormWidgetBase
      */
     public $useCaption = true;
 
+    /**
+     * @var boolean Automatically attaches the uploaded file on upload if the parent record exists instead of using deferred binding to attach on save of the parent record. Defaults to false.
+     */
+    public $attachOnUpload = false;
+
     //
     // Object properties
     //
@@ -79,6 +86,11 @@ class FileUpload extends FormWidgetBase
      * @inheritDoc
      */
     protected $defaultAlias = 'fileupload';
+
+    /**
+     * @var Backend\Widgets\Form The embedded form for modifying the properties of the selected file
+     */
+    protected $configFormWidget;
 
     /**
      * @inheritDoc
@@ -92,14 +104,15 @@ class FileUpload extends FormWidgetBase
             'fileTypes',
             'mimeTypes',
             'thumbOptions',
-            'useCaption'
+            'useCaption',
+            'attachOnUpload',
         ]);
 
         if ($this->formField->disabled) {
             $this->previewMode = true;
         }
 
-        $this->checkUploadPostback();
+        $this->getConfigFormWidget();
     }
 
     /**
@@ -116,6 +129,10 @@ class FileUpload extends FormWidgetBase
      */
     protected function prepareVars()
     {
+        if ($this->formField->disabled) {
+            $this->previewMode = true;
+        }
+
         if ($this->previewMode) {
             $this->useCaption = false;
         }
@@ -131,6 +148,44 @@ class FileUpload extends FormWidgetBase
         $this->vars['cssBlockDimensions'] = $this->getCssDimensions('block');
         $this->vars['useCaption'] = $this->useCaption;
         $this->vars['prompt'] = $this->getPromptText();
+    }
+
+    /**
+     * Get the file record for this request, returns false if none available
+     *
+     * @return System\Models\File|false
+     */
+    protected function getFileRecord()
+    {
+        $record = false;
+
+        if (!empty(post('file_id'))) {
+            $record = $this->getRelationModel()::find(post('file_id')) ?: false;
+        }
+
+        return $record;
+    }
+
+    /**
+     * Get the instantiated config Form widget
+     *
+     * @return void
+     */
+    public function getConfigFormWidget()
+    {
+        if ($this->configFormWidget) {
+            return $this->configFormWidget;
+        }
+
+        $config = $this->makeConfig('~/modules/system/models/file/fields.yaml');
+        $config->model = $this->getFileRecord() ?: $this->getRelationModel();
+        $config->alias = $this->alias . $this->defaultAlias;
+        $config->arrayName = $this->getFieldName();
+
+        $widget = $this->makeWidget(Form::class, $config);
+        $widget->bindToController();
+
+        return $this->configFormWidget = $widget;
     }
 
     protected function getFileList()
@@ -201,21 +256,21 @@ class FileUpload extends FormWidgetBase
         $cssDimensions = '';
 
         if ($mode == 'block') {
-            $cssDimensions .= ($this->imageWidth)
+            $cssDimensions .= $this->imageWidth
                 ? 'width: '.$this->imageWidth.'px;'
                 : 'width: '.$this->imageHeight.'px;';
 
             $cssDimensions .= ($this->imageHeight)
-                ? 'height: '.$this->imageHeight.'px;'
+                ? 'max-height: '.$this->imageHeight.'px;'
                 : 'height: auto;';
         }
         else {
-            $cssDimensions .= ($this->imageWidth)
+            $cssDimensions .= $this->imageWidth
                 ? 'width: '.$this->imageWidth.'px;'
                 : 'width: auto;';
 
             $cssDimensions .= ($this->imageHeight)
-                ? 'height: '.$this->imageHeight.'px;'
+                ? 'max-height: '.$this->imageHeight.'px;'
                 : 'height: auto;';
         }
 
@@ -293,7 +348,7 @@ class FileUpload extends FormWidgetBase
     public function onLoadAttachmentConfig()
     {
         $fileModel = $this->getRelationModel();
-        if (($fileId = post('file_id')) && ($file = $fileModel::find($fileId))) {
+        if ($file = $this->getFileRecord()) {
             $file = $this->decorateFileAttributes($file);
 
             $this->vars['file'] = $file;
@@ -314,11 +369,14 @@ class FileUpload extends FormWidgetBase
     public function onSaveAttachmentConfig()
     {
         try {
-            $fileModel = $this->getRelationModel();
-            if (($fileId = post('file_id')) && ($file = $fileModel::find($fileId))) {
-                $file->title = post('title');
-                $file->description = post('description');
-                $file->save();
+            $formWidget = $this->getConfigFormWidget();
+            if ($file = $formWidget->model) {
+                $modelsToSave = $this->prepareModelsToSave($file, $formWidget->getSaveData());
+                Db::transaction(function () use ($modelsToSave, $formWidget) {
+                    foreach ($modelsToSave as $modelToSave) {
+                        $modelToSave->save(null, $formWidget->getSessionKey());
+                    }
+                });
 
                 return ['displayName' => $file->title ?: $file->file_name];
             }
@@ -336,7 +394,10 @@ class FileUpload extends FormWidgetBase
     protected function loadAssets()
     {
         $this->addCss('css/fileupload.css', 'core');
-        $this->addJs('js/fileupload.js', 'core');
+        $this->addJs('js/fileupload.js', [
+            'build' => 'core',
+            'cache'  => 'false'
+        ]);
     }
 
     /**
@@ -348,15 +409,10 @@ class FileUpload extends FormWidgetBase
     }
 
     /**
-     * Checks the current request to see if it is a postback containing a file upload
-     * for this particular widget.
+     * Upload handler for the server-side processing of uploaded files
      */
-    protected function checkUploadPostback()
+    public function onUpload()
     {
-        if (!($uniqueId = Request::header('X-OCTOBER-FILEUPLOAD')) || $uniqueId != $this->getId()) {
-            return;
-        }
-
         try {
             if (!Input::hasFile('file_data')) {
                 throw new ApplicationException('File missing from request');
@@ -394,7 +450,17 @@ class FileUpload extends FormWidgetBase
             $file->is_public = $fileRelation->isPublic();
             $file->save();
 
-            $fileRelation->add($file, $this->sessionKey);
+            /**
+             * Attach directly to the parent model if it exists and attachOnUpload has been set to true
+             * else attach via deferred binding
+             */
+            $parent = $fileRelation->getParent();
+            if ($this->attachOnUpload && $parent && $parent->exists) {
+                $fileRelation->add($file);
+            }
+            else {
+                $fileRelation->add($file, $this->sessionKey);
+            }
 
             $file = $this->decorateFileAttributes($file);
 
@@ -404,14 +470,13 @@ class FileUpload extends FormWidgetBase
                 'path' => $file->pathUrl
             ];
 
-            Response::json($result, 200)->send();
-
+            $response = Response::make($result, 200);
         }
         catch (Exception $ex) {
-            Response::json($ex->getMessage(), 400)->send();
+            $response = Response::make($ex->getMessage(), 400);
         }
 
-        exit;
+        return $response;
     }
 
     /**

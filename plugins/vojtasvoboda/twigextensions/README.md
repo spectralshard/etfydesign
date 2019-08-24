@@ -31,11 +31,11 @@ Than you can use newly added filters/functions at your templates:
 
 ## Available functions
 
-[config](https://laravel.com/docs/5.0/configuration#accessing-configuration-values), [session](https://laravel.com/docs/5.0/session#session-usage), [trans](https://octobercms.com/docs/plugin/localization), [var_dump](http://php.net/manual/en/function.var-dump.php), [template\_from\_string](http://twig.sensiolabs.org/doc/functions/template_from_string.html)
+[config](https://laravel.com/docs/5.0/configuration#accessing-configuration-values), [env](https://laravel.com/docs/5.8/helpers#method-env), [session](https://laravel.com/docs/5.0/session#session-usage), [trans](https://octobercms.com/docs/plugin/localization), [var_dump](http://php.net/manual/en/function.var-dump.php), [template\_from\_string](http://twig.sensiolabs.org/doc/functions/template_from_string.html)
 
 ### config
 
-Function transports the functionality of the Laravel `config()` helper function to Twig.
+Function move the functionality of the Laravel `config()` helper function to Twig.
 
 ```
 {{ config('app.locale') }}
@@ -43,9 +43,19 @@ Function transports the functionality of the Laravel `config()` helper function 
 The example would output the value currently stored in `app.locale`.
 See [more about the Laravel config helper function here](https://laravel.com/docs/5.0/configuration#accessing-configuration-values).
 
+### env
+
+Function move the functionality of the Laravel `env()` helper function to Twig.
+
+```
+{{ env('APP_ENV', 'production') }}
+```
+
+The example would output the value currently stored in `APP_ENV` environment variable. Second parameter is default value, when ENV key does not exists.
+
 ### session
 
-Function transports the functionality of the Laravel `session()` helper function to Twig.
+Function move the functionality of the Laravel `session()` helper function to Twig.
 
 ```
 {{ session('my.session.key') }}
@@ -55,7 +65,7 @@ See [more about the Laravel session helper function here](https://laravel.com/do
 
 ### trans
 
-Function transports the functionality of the Laravel `trans()` helper function to Twig.
+Function move the functionality of the Laravel `trans()` helper function to Twig.
 
 ```
 {{ trans('acme.blog::lang.app.name') }}
@@ -84,8 +94,8 @@ Function loads a template from a string.
 ## Available filters
 
 strftime, uppercase, lowercase, ucfirst, lcfirst, ltrim, rtrim, str\_repeat,
-plural, truncate, wordwrap, strpad, strip_tags, leftpad, rightpad, rtl, shuffle, time\_diff,
-localizeddate, localizednumber, localizedcurrency, mailto, var\_dump, revision
+plural, truncate, wordwrap, strpad, str_replace, strip_tags, leftpad, rightpad, rtl, shuffle, time\_diff,
+localizeddate, localizednumber, localizedcurrency, mailto, var\_dump, revision, sortbyfield
 
 ### strftime
 
@@ -248,6 +258,20 @@ This would print:
 
 ```
 ooxxxoo
+```
+
+### str_replace
+
+Replace all occurrences of the search string with the replacement string.
+
+```
+{{ 'Alice' | str_replace('Alice', 'Bob') }}
+```
+
+This would return:
+
+```
+Bob
 ```
 
 ### strip_tags
@@ -431,12 +455,13 @@ PHP encrypts your email address and generates the JavaScript that decrypts it. M
 #### Filter parameters
 
 ```
-{{ 'vojtasvoboda.cz@gmail.com' | mailto(true, true, 'Let me know') }}
+{{ 'vojtasvoboda.cz@gmail.com' | mailto(true, true, 'Let me know', 'my-class') }}
 ```
 
 - first boolean parameter = returns email clickable (with link)
 - second boolean parameter = encryption is enabled
 - third string parameter = link text (not encrypted!)
+- fourth (optional) parameter = CSS class name (will render &lt;a mailto:.. class="my-class"&gt;..) 
 
 ### var_dump
 
@@ -466,7 +491,19 @@ See: https://github.com/vojtasvoboda/oc-twigextensions-plugin/issues/25
 https://stackoverflow.com/questions/32414/how-can-i-force-clients-to-refresh-javascript-files  
 
 http://php.net/manual/en/function.date.php  
- 
+
+### sortbyfield
+
+Sort array/collection by given field (key).
+
+```
+{% set data = [{'name': 'David', 'age': 31}, {'name': 'John', 'age': 28}] %}
+{% for item in data | sortbyfield('age') %}
+    {{ item.name }}&nbsp;
+{% endfor %}
+```
+
+Output will be: John David 
 
 ## Contributing
 

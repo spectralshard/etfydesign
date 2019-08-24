@@ -1,0 +1,81 @@
+1566643439a:1:{s:16:"blog/article.htm";a:10:{s:8:"fileName";s:16:"blog/article.htm";s:7:"content";s:1356:"title = "Article"
+url = "/blogue/article/:slug"
+layout = "default"
+is_hidden = 0
+
+[blogPost article]
+slug = "{{ :slug }}"
+categoryPage = "about"
+
+==
+<?php
+function onEnd()
+{
+    // Optional - set the page title to the post title
+    if ($this->post)
+    $this->page->title = $this->post->title;
+}
+?>
+==
+<section id="blog">
+    <div class="container">
+        <div class="row">
+        <div class="col-12">
+            {% for category in post.categories %}
+            <h6 class="h6-responsive text-center" style="color: #5a5a5a"><em>{{ category.name }}</em></h6>
+            {% if not loop.last %}, {% endif %}
+            {% endfor %}
+            <h1 class="h1-responsive text-primary text-underline text-center">{{ post.title }}</h1>
+            </div>
+
+                    <div class="col-12">
+                    {% if post %}
+                        {% partial 'share' %}
+                        {% component 'article' %}
+
+                    {% else %}
+                        <h2>Sujet introuvable</h2>
+                    {% endif %}
+                    </div>
+        </div>
+    </div>
+                <div class="col-12 text-center mt-5">
+                    <a href="{{ 'blog/blogList'|page }}" role="button" class="btn btn-dark">
+                        {{ 'View all my projects'|_ }}
+                    </a>
+                </div>
+
+</section>";s:5:"mtime";i:1523209519;s:6:"markup";s:1053:"<section id="blog">
+    <div class="container">
+        <div class="row">
+        <div class="col-12">
+            {% for category in post.categories %}
+            <h6 class="h6-responsive text-center" style="color: #5a5a5a"><em>{{ category.name }}</em></h6>
+            {% if not loop.last %}, {% endif %}
+            {% endfor %}
+            <h1 class="h1-responsive text-primary text-underline text-center">{{ post.title }}</h1>
+            </div>
+
+                    <div class="col-12">
+                    {% if post %}
+                        {% partial 'share' %}
+                        {% component 'article' %}
+
+                    {% else %}
+                        <h2>Sujet introuvable</h2>
+                    {% endif %}
+                    </div>
+        </div>
+    </div>
+                <div class="col-12 text-center mt-5">
+                    <a href="{{ 'blog/blogList'|page }}" role="button" class="btn btn-dark">
+                        {{ 'View all my projects'|_ }}
+                    </a>
+                </div>
+
+</section>";s:4:"code";s:141:"function onEnd()
+{
+    // Optional - set the page title to the post title
+    if ($this->post)
+    $this->page->title = $this->post->title;
+}";s:5:"title";s:7:"Article";s:3:"url";s:21:"/blogue/article/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:16:"blogPost article";a:2:{s:4:"slug";s:11:"{{ :slug }}";s:12:"categoryPage";s:5:"about";}}}

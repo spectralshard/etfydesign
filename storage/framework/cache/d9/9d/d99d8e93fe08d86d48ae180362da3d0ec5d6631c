@@ -1,0 +1,21 @@
+1566643439a:1:{s:20:"language/default.htm";a:5:{s:8:"fileName";s:20:"language/default.htm";s:7:"content";s:401:"<div class="languagebox">
+{{ form_open() }}
+<i class="fa fa-language text-primary" aria-hidden="true"></i>
+
+    <select class="newform" name="locale" data-request="onSwitchLocale" class="form-control">
+        {% for code, name in locales %}
+            <option value="{{ code }}" {{ code == activeLocale ? 'selected' }}>{{ name }}</option>
+        {% endfor %}
+    </select>
+{{ form_close() }}
+</div>";s:5:"mtime";i:1523114178;s:6:"markup";s:401:"<div class="languagebox">
+{{ form_open() }}
+<i class="fa fa-language text-primary" aria-hidden="true"></i>
+
+    <select class="newform" name="locale" data-request="onSwitchLocale" class="form-control">
+        {% for code, name in locales %}
+            <option value="{{ code }}" {{ code == activeLocale ? 'selected' }}>{{ name }}</option>
+        {% endfor %}
+    </select>
+{{ form_close() }}
+</div>";s:4:"code";N;}}

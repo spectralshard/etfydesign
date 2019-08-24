@@ -1,4 +1,6 @@
-<?php namespace Jenssegers\Date;
+<?php
+
+namespace Jenssegers\Date;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -13,12 +15,14 @@ class DateServiceProvider extends ServiceProvider
 
     /**
      * Bootstrap the application events.
-     *
-     * @return void
      */
     public function boot()
     {
-        $this->app['events']->listen('locale.changed', function () {
+        $localeChangedEvent = class_exists('\\Illuminate\\Foundation\\Events\\LocaleUpdated')
+            ? \Illuminate\Foundation\Events\LocaleUpdated::class
+            : 'locale.changed';
+
+        $this->app['events']->listen($localeChangedEvent, function () {
             $this->setLocale();
         });
 
@@ -27,7 +31,6 @@ class DateServiceProvider extends ServiceProvider
 
     /**
      * Set the locale.
-     *
      */
     protected function setLocale()
     {
@@ -38,8 +41,6 @@ class DateServiceProvider extends ServiceProvider
 
     /**
      * Register the service provider.
-     *
-     * @return void
      */
     public function register()
     {

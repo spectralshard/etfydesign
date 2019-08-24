@@ -1,15 +1,15 @@
 <?php namespace October\Rain\Auth\Models;
 
+use Str;
 use Hash;
 use October\Rain\Database\Model;
 use InvalidArgumentException;
-use RuntimeException;
 use Exception;
 
 /**
  * User model
  */
-class User extends Model
+class User extends Model implements \Illuminate\Contracts\Auth\Authenticatable
 {
     use \October\Rain\Database\Traits\Hashable;
     use \October\Rain\Database\Traits\Purgeable;
@@ -98,6 +98,11 @@ class User extends Model
      * @var string The login attribute.
      */
     public static $loginAttribute = 'email';
+
+    /**
+     * @var string The column name of the "remember me" token.
+     */
+    protected $rememberTokenName = 'persist_code';
 
     /**
      * @var array The user merged permissions.
@@ -399,10 +404,8 @@ class User extends Model
         if (!$this->mergedPermissions) {
             $permissions = [];
 
-            if ($role = $this->getRole()) {
-                if (is_array($role->permissions)) {
-                    $permissions = array_merge($permissions, $role->permissions);
-                }
+            if (($role = $this->getRole()) && is_array($role->permissions)) {
+                $permissions = array_merge($permissions, $role->permissions);
             }
 
             if (is_array($this->permissions)) {
@@ -539,11 +542,7 @@ class User extends Model
             }
         }
 
-        if ($all === false) {
-            return false;
-        }
-
-        return true;
+        return !($all === false);
     }
 
     /**
@@ -584,12 +583,21 @@ class User extends Model
     //
 
     /**
+     * Get the name of the unique identifier for the user.
+     * @return string
+     */
+    public function getAuthIdentifierName()
+    {
+        return $this->getKeyName();
+    }
+
+    /**
      * Get the unique identifier for the user.
      * @return mixed
      */
     public function getAuthIdentifier()
     {
-        return $this->getKey();
+        return $this->{$this->getAuthIdentifierName()};
     }
 
     /**
@@ -635,7 +643,7 @@ class User extends Model
      */
     public function getRememberTokenName()
     {
-        return 'persist_code';
+        return $this->rememberTokenName;
     }
 
     //
@@ -648,21 +656,6 @@ class User extends Model
      */
     public function getRandomString($length = 42)
     {
-        /*
-         * Use OpenSSL (if available)
-         */
-        if (function_exists('openssl_random_pseudo_bytes')) {
-            $bytes = openssl_random_pseudo_bytes($length * 2);
-
-            if ($bytes === false) {
-                throw new RuntimeException('Unable to generate a random string');
-            }
-
-            return substr(str_replace(['/', '+', '='], '', base64_encode($bytes)), 0, $length);
-        }
-
-        $pool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-        return substr(str_shuffle(str_repeat($pool, 5)), 0, $length);
+        return Str::random($length);
     }
 }

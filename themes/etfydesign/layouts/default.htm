@@ -3,23 +3,47 @@ description = "Default Layout"
 [localePicker language]
 forceUrl = 0
 ==
+<?php
+use RainLab\Translate\Classes\Translator;
+function onInit()
+{
+    $translator = Translator::instance();
+    $lang = $translator->getLocale();
+$this['lang'] = $translator->getLocale();
+$this['site_url'] = asset('');
+}
+?>
+==
 <!DOCTYPE html>
 <html>
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70359045-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-70359045-7');
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Etfy Design - {{ this.page.title|_ }}</title>
     <meta name="google-site-verification" content="r9dMKr9Xx2ryKMGP6Wg20WTKsjJYjMZsa2CJxCWXRyk" />
-    <meta name="description" content="{{ this.page.description|_ }}">
+    <meta name="description" content="{{ this.page.meta_description }}">
     <meta name="title" content="{{ this.page.title }}">
     <meta name="author" content="Etfy Design">
     <meta name="robots" content="index,follow">
+    <link rel="canonical" href="{{ ''|page }}"/>
     <meta property="og:type" content="website" />
     <meta property="og:image" content="{{ this.page.og_image }}" />
     <meta property="og:title" content="Etfy Design - {{ this.page.title }}" />
-    <meta property="og:url" content="{{ this.page.url }}" />
+    <meta property="og:url" content="{{ ''|page }}" />
     <meta property="og:site_name" content="Etfy Design" />
-    <meta property="og:description" content="{{ this.page.settings.meta_description }}" />
+    <meta property="og:locale" content="fr_CA">
+    <meta property="og:description" content="{{ this.page.meta_description }}" />
+    <meta name="twitter:title" content="{{ this.page.title|_ }} | Techno24">
+    <meta name="twitter:description" content="{{ this.page.meta_description }}">
+    <meta name="twitter:image" content="{{ this.page.og_image }}">
+    <meta name="twitter:card" content="summary_large_image">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="icon" type="image/jpg" href="{{ 'assets/images/favicon.png'|theme }}"/>
     <link href="{{ 'assets/images/apple-touch-icon.png'|theme }}" rel="apple-touch-icon">
@@ -31,40 +55,23 @@ forceUrl = 0
     {% styles %}
 </head>
 <body>
-
 <header>
     {% partial 'navbar' %}
 </header>
-
-
 <main id="page">
     {% page %}
 </main>
-
 <footer>
     {% partial 'footer' %}
 </footer>
-
 {% flash %}
 <span id="flash" data-type="{{ type }}" data-message="{{ message }}"></span>
 {% endflash %}
-
 <script src="{{ [
 'assets/js/scripts.js',
-'assets/vendor/jquery/jquery-3.2.1.min.js',
-'assets/vendor/popper/popper.js',
-'assets/vendor/tether/dist/js/tether.min.js',
-'assets/vendor/bootstrap/dist/js/bootstrap.min.js',
+'assets/vendor/jquery/jquery-3.4.1.min.js',
+'assets/vendor/bootstrap/js/bootstrap.min.js',
 ]|theme }}"></script>
 {% framework extras %}
 {% scripts %}
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70359045-7"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-70359045-7');
-</script>
 </body>

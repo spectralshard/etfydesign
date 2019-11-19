@@ -1,0 +1,145 @@
+1574192251a:1:{s:11:"default.htm";a:7:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:2924:"description = "Default Layout"
+
+[localePicker language]
+forceUrl = 0
+==
+<?php
+use RainLab\Translate\Classes\Translator;
+function onInit()
+{
+    $translator = Translator::instance();
+    $lang = $translator->getLocale();
+$this['lang'] = $translator->getLocale();
+$this['site_url'] = asset('');
+}
+?>
+==
+<!DOCTYPE html>
+<html>
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70359045-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-70359045-7');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Etfy Design - {{ this.page.title|_ }}</title>
+    <meta name="google-site-verification" content="r9dMKr9Xx2ryKMGP6Wg20WTKsjJYjMZsa2CJxCWXRyk" />
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.title }}">
+    <meta name="author" content="Etfy Design">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="{{ ''|page }}"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{{ this.page.og_image }}" />
+    <meta property="og:title" content="Etfy Design - {{ this.page.title }}" />
+    <meta property="og:url" content="{{ ''|page }}" />
+    <meta property="og:site_name" content="Etfy Design" />
+    <meta property="og:locale" content="fr_CA">
+    <meta property="og:description" content="{{ this.page.meta_description }}" />
+    <meta name="twitter:title" content="{{ this.page.title|_ }} | Techno24">
+    <meta name="twitter:description" content="{{ this.page.meta_description }}">
+    <meta name="twitter:image" content="{{ this.page.og_image }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" type="image/jpg" href="{{ 'assets/images/favicon.png'|theme }}"/>
+    <link href="{{ 'assets/images/apple-touch-icon.png'|theme }}" rel="apple-touch-icon">
+    <link href="{{ 'assets/images/apple-touch-icon-precomposed.png'|theme }}" rel="apple-touch-icon-precomposed">
+    <link href="{{ [
+    'assets/css/theme.css',
+    'assets/vendor/animate.css/animate.min.css',
+    ]|theme }}" rel="stylesheet">
+    {% styles %}
+</head>
+<body>
+<header>
+    {% partial 'navbar' %}
+</header>
+<main id="page">
+    {% page %}
+</main>
+<footer>
+    {% partial 'footer' %}
+</footer>
+{% flash %}
+<span id="flash" data-type="{{ type }}" data-message="{{ message }}"></span>
+{% endflash %}
+<script src="{{ [
+'assets/js/scripts.js',
+'assets/vendor/jquery/jquery-3.4.1.min.js',
+'assets/vendor/bootstrap/js/bootstrap.min.js',
+]|theme }}"></script>
+{% framework extras %}
+{% scripts %}
+</body>";s:5:"mtime";i:1574190959;s:6:"markup";s:2607:"<!DOCTYPE html>
+<html>
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70359045-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-70359045-7');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Etfy Design - {{ this.page.title|_ }}</title>
+    <meta name="google-site-verification" content="r9dMKr9Xx2ryKMGP6Wg20WTKsjJYjMZsa2CJxCWXRyk" />
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.title }}">
+    <meta name="author" content="Etfy Design">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="{{ ''|page }}"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{{ this.page.og_image }}" />
+    <meta property="og:title" content="Etfy Design - {{ this.page.title }}" />
+    <meta property="og:url" content="{{ ''|page }}" />
+    <meta property="og:site_name" content="Etfy Design" />
+    <meta property="og:locale" content="fr_CA">
+    <meta property="og:description" content="{{ this.page.meta_description }}" />
+    <meta name="twitter:title" content="{{ this.page.title|_ }} | Techno24">
+    <meta name="twitter:description" content="{{ this.page.meta_description }}">
+    <meta name="twitter:image" content="{{ this.page.og_image }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" type="image/jpg" href="{{ 'assets/images/favicon.png'|theme }}"/>
+    <link href="{{ 'assets/images/apple-touch-icon.png'|theme }}" rel="apple-touch-icon">
+    <link href="{{ 'assets/images/apple-touch-icon-precomposed.png'|theme }}" rel="apple-touch-icon-precomposed">
+    <link href="{{ [
+    'assets/css/theme.css',
+    'assets/vendor/animate.css/animate.min.css',
+    ]|theme }}" rel="stylesheet">
+    {% styles %}
+</head>
+<body>
+<header>
+    {% partial 'navbar' %}
+</header>
+<main id="page">
+    {% page %}
+</main>
+<footer>
+    {% partial 'footer' %}
+</footer>
+{% flash %}
+<span id="flash" data-type="{{ type }}" data-message="{{ message }}"></span>
+{% endflash %}
+<script src="{{ [
+'assets/js/scripts.js',
+'assets/vendor/jquery/jquery-3.4.1.min.js',
+'assets/vendor/bootstrap/js/bootstrap.min.js',
+]|theme }}"></script>
+{% framework extras %}
+{% scripts %}
+</body>";s:4:"code";s:226:"
+use RainLab\Translate\Classes\Translator;
+function onInit()
+{
+    $translator = Translator::instance();
+    $lang = $translator->getLocale();
+$this['lang'] = $translator->getLocale();
+$this['site_url'] = asset('');
+}";s:11:"description";s:14:"Default Layout";s:21:"localePicker language";a:1:{s:8:"forceUrl";s:1:"0";}}}

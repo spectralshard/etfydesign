@@ -1,0 +1,45 @@
+1574191726a:1:{s:11:"contact.htm";a:10:{s:8:"fileName";s:11:"contact.htm";s:7:"content";s:624:"title = "Contact"
+url = "/contact"
+layout = "default"
+is_hidden = 0
+
+[simpleContact mycontact]
+nameTitle = "Full Name"
+emailTitle = "Email"
+phoneTitle = "Phone"
+subjectTitle = "Subject"
+messageTitle = "Message"
+buttonText = "Submit"
+displayPhone = 1
+==
+<div id="contact">
+    <div class="container">
+        <h1 class="h1-responsive white-text text-shadow">
+            {{ 'Contact me '|_ }}
+        </h1>
+    </div>
+</div>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+        {% component 'mycontact' %}
+            </div>
+        </div>
+    </div>
+</section>";s:5:"mtime";i:1522372848;s:6:"markup";s:371:"<div id="contact">
+    <div class="container">
+        <h1 class="h1-responsive white-text text-shadow">
+            {{ 'Contact me '|_ }}
+        </h1>
+    </div>
+</div>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+        {% component 'mycontact' %}
+            </div>
+        </div>
+    </div>
+</section>";s:4:"code";N;s:5:"title";s:7:"Contact";s:3:"url";s:8:"/contact";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:23:"simpleContact mycontact";a:7:{s:9:"nameTitle";s:9:"Full Name";s:10:"emailTitle";s:5:"Email";s:10:"phoneTitle";s:5:"Phone";s:12:"subjectTitle";s:7:"Subject";s:12:"messageTitle";s:7:"Message";s:10:"buttonText";s:6:"Submit";s:12:"displayPhone";s:1:"1";}}}

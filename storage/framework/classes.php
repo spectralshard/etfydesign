@@ -66,4 +66,7 @@
   'RainLab\\Blog\\Classes\\ComponentAbstract' => 'plugins/rainlab/blog/classes/ComponentAbstract.php',
   'RainLab\\Blog\\Models\\Settings' => 'plugins/rainlab/blog/models/Settings.php',
   'Zainab\\SimpleContact\\Classes\\ZHelper' => 'plugins/zainab/simplecontact/classes/ZHelper.php',
+  'panakour\\backup\\Controllers\\backups' => 'plugins/panakour/backup/controllers/backups.php',
+  'PanaKour\\Backup\\Repository' => 'plugins/panakour/backup/Repository.php',
+  'PanaKour\\Backup\\Dropbox' => 'plugins/panakour/backup/Dropbox.php',
 );

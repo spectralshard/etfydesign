@@ -1,0 +1,104 @@
+1574191726a:1:{s:8:"home.htm";a:10:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:1830:"title = "Home"
+url = "/"
+layout = "default"
+is_hidden = 0
+
+[carousel myslider]
+id = 1
+==
+<div class="d-none d-sm-block">
+{% component 'myslider' %}
+</div>
+<div class="d-block d-sm-none" style="padding-top: 5rem;">
+    {% component 'myslider' %}
+</div>
+<section class="intro text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+        <h1 class="h1-responsive">
+            {{ 'Welcome to our website!'|_ }}
+            <br/>
+            {{ 'where costume creation becomes a reality.'|_ }}
+        </h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col d-none d-lg-block d-xl-block">
+            </div>
+            <div class="col-lg-3 col-md-5 col-sm-7 pb-2">
+                <img class="d-block profile mx-auto" src="{{'assets/images/profil.jpg'|theme}}">
+            </div>
+            <div class="col d-none d-lg-block d-xl-block">
+            </div>
+            <div class="col-md-7 pt-5 pb-5">
+                <h2 class="h2-responsive pt-3">
+                    {{ 'Who is Etfy Design? '|_ }}
+                </h2>
+                <p>
+                    {{ 'I always had a great passion for the world of fantasy and the gaming universe of which inspired me to create costumes of video games characters.'|_ }}
+                </p>
+                <span class="pb-3">
+                <a href="{{ 'about'|page }}" role="button" class="btn btn-primary btn-sm">
+                    {{ 'Learn more'|_ }}
+                </a></span>
+            </div>
+            <div class="col d-none d-lg-block d-xl-block">
+            </div>
+        </div>
+    </div>
+</section>
+{% partial 'lastprojects' %}
+";s:5:"mtime";i:1524097256;s:6:"markup";s:1731:"<div class="d-none d-sm-block">
+{% component 'myslider' %}
+</div>
+<div class="d-block d-sm-none" style="padding-top: 5rem;">
+    {% component 'myslider' %}
+</div>
+<section class="intro text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+        <h1 class="h1-responsive">
+            {{ 'Welcome to our website!'|_ }}
+            <br/>
+            {{ 'where costume creation becomes a reality.'|_ }}
+        </h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col d-none d-lg-block d-xl-block">
+            </div>
+            <div class="col-lg-3 col-md-5 col-sm-7 pb-2">
+                <img class="d-block profile mx-auto" src="{{'assets/images/profil.jpg'|theme}}">
+            </div>
+            <div class="col d-none d-lg-block d-xl-block">
+            </div>
+            <div class="col-md-7 pt-5 pb-5">
+                <h2 class="h2-responsive pt-3">
+                    {{ 'Who is Etfy Design? '|_ }}
+                </h2>
+                <p>
+                    {{ 'I always had a great passion for the world of fantasy and the gaming universe of which inspired me to create costumes of video games characters.'|_ }}
+                </p>
+                <span class="pb-3">
+                <a href="{{ 'about'|page }}" role="button" class="btn btn-primary btn-sm">
+                    {{ 'Learn more'|_ }}
+                </a></span>
+            </div>
+            <div class="col d-none d-lg-block d-xl-block">
+            </div>
+        </div>
+    </div>
+</section>
+{% partial 'lastprojects' %}";s:4:"code";N;s:5:"title";s:4:"Home";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:17:"carousel myslider";a:1:{s:2:"id";s:1:"1";}}}

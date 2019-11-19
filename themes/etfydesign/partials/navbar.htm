@@ -27,8 +27,22 @@ description = "Navbar"
             <li class="nav-item">
                 <a class="nav-link" href="{{ 'contact'|page }}">{{ 'Contact'|_ }}</a>
             </li>
-            <li class="nav-item mx-auto">
-                {% component 'language' %}
+            <li class="nav-item  mx-auto">
+                {% if lang == 'fr' %}
+                <a href="#"
+                   class="nav-link"
+                   data-request="onSwitchLocale"
+                   data-request-data="locale: 'en'" title="English">
+                    English
+                </a>
+                {% else %}
+                <a href="#"
+                   class="nav-link"
+                   data-request="onSwitchLocale"
+                   data-request-data="locale: 'fr'" title="Français">
+                    Français
+                </a>
+                {% endif %}
             </li>
         </ul>
     </div>

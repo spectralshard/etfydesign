@@ -10,7 +10,7 @@ return array(
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
     'ParsedownExtra' => array($vendorDir . '/erusev/parsedown-extra'),
     'Parsedown' => array($vendorDir . '/erusev/parsedown'),
-    'Less' => array($vendorDir . '/oyejorge/less.php/lib'),
+    'Less' => array($vendorDir . '/october/rain/src/Parse/Assetic/Less/lib'),
     'Doctrine\\DBAL\\' => array($vendorDir . '/doctrine/dbal/lib'),
     'Doctrine\\Common\\Collections\\' => array($vendorDir . '/doctrine/collections/lib'),
     'Assetic' => array($vendorDir . '/kriswallsmith/assetic/src'),

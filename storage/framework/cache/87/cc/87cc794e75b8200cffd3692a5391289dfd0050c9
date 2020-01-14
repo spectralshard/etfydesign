@@ -1,4 +1,4 @@
-1574192251a:1:{s:11:"default.htm";a:7:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:2924:"description = "Default Layout"
+1579021619a:1:{s:11:"default.htm";a:7:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:2933:"description = "Default Layout"
 
 [localePicker language]
 forceUrl = 0
@@ -74,7 +74,8 @@ $this['site_url'] = asset('');
 ]|theme }}"></script>
 {% framework extras %}
 {% scripts %}
-</body>";s:5:"mtime";i:1574190959;s:6:"markup";s:2607:"<!DOCTYPE html>
+</body>
+</html>";s:5:"mtime";i:1574276277;s:6:"markup";s:2616:"<!DOCTYPE html>
 <html>
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70359045-7"></script>
@@ -134,7 +135,8 @@ $this['site_url'] = asset('');
 ]|theme }}"></script>
 {% framework extras %}
 {% scripts %}
-</body>";s:4:"code";s:226:"
+</body>
+</html>";s:4:"code";s:226:"
 use RainLab\Translate\Classes\Translator;
 function onInit()
 {

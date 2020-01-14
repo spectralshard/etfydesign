@@ -9,7 +9,9 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
+        'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'ce89ac35a6c330c55f4710717db9ff78' => __DIR__ . '/..' . '/kriswallsmith/assetic/src/functions.php',
@@ -17,7 +19,9 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '9ab6c0b43d4b818d98f088285310c9d9' => __DIR__ . '/..' . '/october/rain/src/Support/helpers.php',
         '97af4f586841c1bd9dd1f8710561ecaa' => __DIR__ . '/..' . '/october/rain/src/Html/helpers.php',
+        'cd649ce7b2ed09f1b036b9e7e82de46e' => __DIR__ . '/..' . '/october/rain/src/Parse/Assetic/Less/lessc.inc.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
     );
@@ -39,7 +43,10 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         'S' => 
         array (
             'System\\' => 7,
+            'Symfony\\Polyfill\\Util\\' => 22,
             'Symfony\\Polyfill\\Php72\\' => 23,
+            'Symfony\\Polyfill\\Php70\\' => 23,
+            'Symfony\\Polyfill\\Php56\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
             'Symfony\\Polyfill\\Iconv\\' => 23,
@@ -141,9 +148,21 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         array (
             0 => __DIR__ . '/../..' . '/modules/system',
         ),
+        'Symfony\\Polyfill\\Util\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-util',
+        ),
         'Symfony\\Polyfill\\Php72\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php72',
+        ),
+        'Symfony\\Polyfill\\Php70\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php70',
+        ),
+        'Symfony\\Polyfill\\Php56\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php56',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -357,7 +376,7 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
         array (
             'Less' => 
             array (
-                0 => __DIR__ . '/..' . '/oyejorge/less.php/lib',
+                0 => __DIR__ . '/..' . '/october/rain/src/Parse/Assetic/Less/lib',
             ),
         ),
         'D' => 
@@ -381,9 +400,15 @@ class ComposerStaticInitce290a037d2cbd6fc6b8d537449d0ac2
     );
 
     public static $classMap = array (
+        'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
+        'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
+        'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
+        'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
         'JSMin' => __DIR__ . '/..' . '/linkorb/jsmin-php/src/jsmin-1.1.1.php',
         'JSMinException' => __DIR__ . '/..' . '/linkorb/jsmin-php/src/jsmin-1.1.1.php',
-        'lessc' => __DIR__ . '/..' . '/oyejorge/less.php/lessc.inc.php',
+        'ParseError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
+        'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
+        'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

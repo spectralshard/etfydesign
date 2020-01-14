@@ -31,7 +31,7 @@ class TranslatablePage extends TranslatableBehavior
 
     public function isTranslatable($key)
     {
-        if ($this->translatableDefault == $this->translatableContext) {
+        if ($key === 'translatable' || $this->translatableDefault == $this->translatableContext) {
             return false;
         }
 
@@ -73,7 +73,7 @@ class TranslatablePage extends TranslatableBehavior
 
             if ($locale != $this->translatableDefault) {
                 $translated = $this->getAttributeTranslated($attr, $locale);
-                $locale_attr = $translated ?: $this->translatableUseFallback ? $locale_attr : null;
+                $locale_attr = ($translated ?: $this->translatableUseFallback) ? $locale_attr : null;
             }
 
             $this->model[$attr] = $locale_attr;

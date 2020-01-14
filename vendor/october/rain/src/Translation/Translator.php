@@ -122,7 +122,11 @@ class Translator implements TranslatorContract
             $this->load($namespace, $group, $locale);
 
             $line = $this->getLine(
-                $namespace, $group, $locale, $item, $replace
+                $namespace,
+                $group,
+                $locale,
+                $item,
+                $replace
             );
 
             if (!is_null($line)) {
@@ -134,7 +138,7 @@ class Translator implements TranslatorContract
         // that will be quick to spot in the UI if language keys are wrong or missing
         // from the application's language files. Otherwise we can return the line.
         if (!isset($line)) {
-            return $key;
+            return $this->makeReplacements($key, $replace);
         }
 
         return $line;
@@ -241,11 +245,10 @@ class Translator implements TranslatorContract
      *
      * @param  string  $id
      * @param  array   $parameters
-     * @param  string  $domain
      * @param  string  $locale
      * @return string
      */
-    public function trans($id, array $parameters = [], $domain = 'messages', $locale = null)
+    public function trans($id, array $parameters = [], $locale = null)
     {
         return $this->get($id, $parameters, $locale);
     }
@@ -256,11 +259,10 @@ class Translator implements TranslatorContract
      * @param  string  $id
      * @param  int     $number
      * @param  array   $parameters
-     * @param  string  $domain
      * @param  string  $locale
      * @return string
      */
-    public function transChoice($id, $number, array $parameters = [], $domain = 'messages', $locale = null)
+    public function transChoice($id, $number, array $parameters = [], $locale = null)
     {
         return $this->choice($id, $number, $parameters, $locale);
     }

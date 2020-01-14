@@ -1,4 +1,4 @@
-1574191726a:1:{s:16:"blog/article.htm";a:10:{s:8:"fileName";s:16:"blog/article.htm";s:7:"content";s:1356:"title = "Article"
+1579021619a:1:{s:16:"blog/article.htm";a:10:{s:8:"fileName";s:16:"blog/article.htm";s:7:"content";s:1356:"title = "Article"
 url = "/blogue/article/:slug"
 layout = "default"
 is_hidden = 0

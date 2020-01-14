@@ -1,4 +1,4 @@
-1574192295a:1:{s:20:"myslider/default.htm";a:5:{s:8:"fileName";s:20:"myslider/default.htm";s:7:"content";s:1180:"<div id="carousel-{{ __SELF__.id }}" class="carousel slide" data-ride="carousel">
+1579021619a:1:{s:20:"myslider/default.htm";a:5:{s:8:"fileName";s:20:"myslider/default.htm";s:7:"content";s:1180:"<div id="carousel-{{ __SELF__.id }}" class="carousel slide" data-ride="carousel">
   {% if __SELF__.carousel.images|length > 1 %}
   <ol class="carousel-indicators">
     {% for i, image in __SELF__.carousel.images %}

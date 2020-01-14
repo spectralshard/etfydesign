@@ -56,7 +56,7 @@ return [
             'driver'    => 'mysql',
             'host'      => 'localhost',
             'port'      => 3306,
-            'database'  => 'etfyd-220318',
+            'database'  => 'etfydesign',
             'username'  => 'root',
             'password'  => 'root',
             'charset'   => 'utf8mb4',

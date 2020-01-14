@@ -1,4 +1,4 @@
-1574192286a:1:{s:19:"article/default.htm";a:5:{s:8:"fileName";s:19:"article/default.htm";s:7:"content";s:1237:"{% set post = __SELF__.post %}
+1579021645a:1:{s:19:"article/default.htm";a:5:{s:8:"fileName";s:19:"article/default.htm";s:7:"content";s:1237:"{% set post = __SELF__.post %}
 
 <div class="row">
     <div class="col-12">

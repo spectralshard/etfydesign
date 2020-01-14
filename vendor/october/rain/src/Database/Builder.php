@@ -58,7 +58,7 @@ class Builder extends BuilderModel
      * - any: result can contain any word
      * - exact: result must contain the exact phrase
      */
-    protected function searchWhereInternal($term, $columns = [], $mode, $boolean)
+    protected function searchWhereInternal($term, $columns, $mode, $boolean)
     {
         if (!is_array($columns)) {
             $columns = [$columns];
@@ -69,9 +69,11 @@ class Builder extends BuilderModel
         }
 
         if ($mode === 'exact') {
-            $this->where(function($query) use ($columns, $term) {
+            $this->where(function ($query) use ($columns, $term) {
                 foreach ($columns as $field) {
-                    if (!strlen($term)) continue;
+                    if (!strlen($term)) {
+                        continue;
+                    }
                     $fieldSql = $this->query->raw(sprintf("lower(%s)", DbDongle::cast($field, 'text')));
                     $termSql = '%'.trim(mb_strtolower($term)).'%';
                     $query->orWhere($fieldSql, 'LIKE', $termSql);
@@ -82,11 +84,13 @@ class Builder extends BuilderModel
             $words = explode(' ', $term);
             $wordBoolean = $mode === 'any' ? 'or' : 'and';
 
-            $this->where(function($query) use ($columns, $words, $wordBoolean) {
+            $this->where(function ($query) use ($columns, $words, $wordBoolean) {
                 foreach ($columns as $field) {
-                    $query->orWhere(function($query) use ($field, $words, $wordBoolean) {
+                    $query->orWhere(function ($query) use ($field, $words, $wordBoolean) {
                         foreach ($words as $word) {
-                            if (!strlen($word)) continue;
+                            if (!strlen($word)) {
+                                continue;
+                            }
                             $fieldSql = $this->query->raw(sprintf("lower(%s)", DbDongle::cast($field, 'text')));
                             $wordSql = '%'.trim(mb_strtolower($word)).'%';
                             $query->where($fieldSql, 'LIKE', $wordSql, $wordBoolean);
@@ -108,11 +112,21 @@ class Builder extends BuilderModel
      * @param  string $pageName
      * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
-    public function paginate($perPage = 15, $currentPage = null, $columns = ['*'], $pageName = 'page')
+    public function paginate($perPage = null, $currentPage = null, $columns = ['*'], $pageName = 'page')
     {
+        /*
+         * Engage Laravel signature support
+         *
+         * paginate($perPage, $columns, $pageName, $currentPage)
+         */
         if (is_array($currentPage)) {
-            $columns = $currentPage;
-            $currentPage = null;
+            $_columns = $columns;
+            $_currentPage = $currentPage;
+            $_pageName = $pageName;
+
+            $columns = $_currentPage;
+            $pageName = is_string($_columns) ? $_columns : 'page';
+            $currentPage = $_pageName === 'page' ? null : $_pageName;
         }
 
         if (!$currentPage) {
@@ -140,15 +154,25 @@ class Builder extends BuilderModel
      * @param  array  $columns
      * @return \Illuminate\Contracts\Pagination\Paginator
      */
-    public function simplePaginate($perPage = null, $currentPage = null, $pageName = 'page', $columns = ['*'])
+    public function simplePaginate($perPage = null, $currentPage = null, $columns = ['*'], $pageName = 'page')
     {
+        /*
+         * Engage Laravel signature support
+         *
+         * paginate($perPage, $columns, $pageName, $currentPage)
+         */
         if (is_array($currentPage)) {
-            $columns = $currentPage;
-            $currentPage = null;
+            $_columns = $columns;
+            $_currentPage = $currentPage;
+            $_pageName = $pageName;
+
+            $columns = $_currentPage;
+            $pageName = is_string($_columns) ? $_columns : 'page';
+            $currentPage = $_pageName === 'page' ? null : $_pageName;
         }
 
         if (!$currentPage) {
-            $currentPage = Paginator::resolveCurrentPage();
+            $currentPage = Paginator::resolveCurrentPage($pageName);
         }
 
         if (!$perPage) {

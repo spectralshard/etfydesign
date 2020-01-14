@@ -1,4 +1,4 @@
-1574191726a:1:{s:19:"blog/categories.htm";a:11:{s:8:"fileName";s:19:"blog/categories.htm";s:7:"content";s:1843:"title = "Catégories"
+1579021619a:1:{s:19:"blog/categories.htm";a:11:{s:8:"fileName";s:19:"blog/categories.htm";s:7:"content";s:1843:"title = "Catégories"
 url = "/blogue/categorie/:slug/:page?"
 layout = "default"
 is_hidden = 0

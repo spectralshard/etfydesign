@@ -14,3 +14,25 @@ if (hamburgers.length > 0) {
     js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12';
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+$(document).ready(function () {
+    $(".owl-slider").owlCarousel({
+        loop:true,
+        margin:10,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:3,
+                nav:false
+            },
+            1000:{
+                items:5,
+                nav:true,
+                loop:false
+            }
+        }
+    })
+});

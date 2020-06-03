@@ -1,5 +1,4 @@
-1579021645a:1:{s:19:"article/default.htm";a:5:{s:8:"fileName";s:19:"article/default.htm";s:7:"content";s:1237:"{% set post = __SELF__.post %}
-
+1591214999a:1:{s:19:"article/default.htm";a:5:{s:8:"fileName";s:19:"article/default.htm";s:7:"content";s:1979:"{% set post = __SELF__.post %}
 <div class="row">
     <div class="col-12">
                 {% if post.featured_images.count %}
@@ -15,8 +14,6 @@
     <div class="col-12 mt-4">
                 {{ post.content_html|raw }}
     </div>
-
-
             {% if post.featured_images.count %}
                 {% for image in post.featured_images %}
                     {% if loop.index != 1 %}
@@ -30,14 +27,27 @@
                     {% endif %}
                 {% endfor %}
             {% endif %}
-
 </div>
-
-
-
-
-";s:5:"mtime";i:1523133011;s:6:"markup";s:1232:"{% set post = __SELF__.post %}
-
+<div class="row">
+    <div class="col-12">
+    {% if post.gallery.count != 0 %}
+    {% for gallery in post.gallery %}
+    <div class="wrapper-gallery">
+        <h3 class="h3-responsive text-center">{{ 'Autres Photos'|_ }}</h3>
+        <div class="gallery-itemscontent">
+            <div id="gallery_in_post" class="owl-carousel owl-theme owl-slider">
+                {% for image in gallery.images %}
+                    <a class="#" href="{{ image.path }}" title="{{image.title}}" data-lightbox="set">
+                    <img class="img-fluid" title="{{image.title}}" src="{{ image.path }}" alt="">
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+    </div>
+</div>";s:5:"mtime";i:1591213384;s:6:"markup";s:1979:"{% set post = __SELF__.post %}
 <div class="row">
     <div class="col-12">
                 {% if post.featured_images.count %}
@@ -53,8 +63,6 @@
     <div class="col-12 mt-4">
                 {{ post.content_html|raw }}
     </div>
-
-
             {% if post.featured_images.count %}
                 {% for image in post.featured_images %}
                     {% if loop.index != 1 %}
@@ -68,5 +76,24 @@
                     {% endif %}
                 {% endfor %}
             {% endif %}
-
+</div>
+<div class="row">
+    <div class="col-12">
+    {% if post.gallery.count != 0 %}
+    {% for gallery in post.gallery %}
+    <div class="wrapper-gallery">
+        <h3 class="h3-responsive text-center">{{ 'Autres Photos'|_ }}</h3>
+        <div class="gallery-itemscontent">
+            <div id="gallery_in_post" class="owl-carousel owl-theme owl-slider">
+                {% for image in gallery.images %}
+                    <a class="#" href="{{ image.path }}" title="{{image.title}}" data-lightbox="set">
+                    <img class="img-fluid" title="{{image.title}}" src="{{ image.path }}" alt="">
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+    </div>
 </div>";s:4:"code";N;}}

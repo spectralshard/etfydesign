@@ -6,6 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Symfony\\Polyfill\\Php72\\' => array($vendorDir . '/symfony/polyfill-php72'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Symfony\\Polyfill\\Intl\\Idn\\' => array($vendorDir . '/symfony/polyfill-intl-idn'),
     'Symfony\\Component\\Process\\' => array($vendorDir . '/symfony/process'),
     'Symfony\\Component\\Finder\\' => array($vendorDir . '/symfony/finder'),
     'Spatie\\TemporaryDirectory\\' => array($vendorDir . '/spatie/temporary-directory/src'),
@@ -13,9 +16,21 @@ return array(
     'Spatie\\Dropbox\\' => array($vendorDir . '/spatie/dropbox-api/src'),
     'Spatie\\DbDumper\\' => array($vendorDir . '/spatie/db-dumper/src'),
     'Spatie\\Backup\\' => array($vendorDir . '/spatie/laravel-backup/src'),
+    'Sabre\\Xml\\' => array($vendorDir . '/sabre/xml/lib'),
+    'Sabre\\VObject\\' => array($vendorDir . '/sabre/vobject/lib'),
+    'Sabre\\Uri\\' => array($vendorDir . '/sabre/uri/lib'),
+    'Sabre\\HTTP\\' => array($vendorDir . '/sabre/http/lib'),
+    'Sabre\\Event\\' => array($vendorDir . '/sabre/event/lib'),
+    'Sabre\\DAV\\' => array($vendorDir . '/sabre/dav/lib/DAV'),
+    'Sabre\\DAVACL\\' => array($vendorDir . '/sabre/dav/lib/DAVACL'),
+    'Sabre\\CardDAV\\' => array($vendorDir . '/sabre/dav/lib/CardDAV'),
+    'Sabre\\CalDAV\\' => array($vendorDir . '/sabre/dav/lib/CalDAV'),
+    'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
+    'League\\Flysystem\\WebDAV\\' => array($vendorDir . '/league/flysystem-webdav/src'),
     'League\\Flysystem\\' => array($vendorDir . '/league/flysystem/src'),
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
     'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
+    'GrahamCampbell\\GuzzleFactory\\' => array($vendorDir . '/graham-campbell/guzzle-factory/src'),
 );

@@ -95,7 +95,7 @@ class PluginTest extends PluginTestCase
         $template = "{{ [1, 2, 3] | shuffle }}";
 
         $twigTemplate = $twig->createTemplate($template);
-        $this->setExpectedException('Twig_Error_Runtime', 'Array to string conversion');
+        $this->expectException('Twig_Error_Runtime', 'Array to string conversion');
         $twigTemplate->render([]);
     }
 
@@ -135,40 +135,40 @@ class PluginTest extends PluginTestCase
     {
         $twig = $this->getTwig();
 
-        $template = "{{ 'Jack' | uppercase }}";
+        $template = "{{ 'Hello Jack' | uppercase }}";
 
         $twigTemplate = $twig->createTemplate($template);
-        $this->assertEquals($twigTemplate->render([]), 'JACK');
+        $this->assertEquals($twigTemplate->render([]), 'HELLO JACK');
     }
 
     public function testLowercaseFunction()
     {
         $twig = $this->getTwig();
 
-        $template = "{{ 'JACK' | lowercase }}";
+        $template = "{{ 'Hello JACK' | lowercase }}";
 
         $twigTemplate = $twig->createTemplate($template);
-        $this->assertEquals($twigTemplate->render([]), 'jack');
+        $this->assertEquals($twigTemplate->render([]), 'hello jack');
     }
 
     public function testUcfirstFunction()
     {
         $twig = $this->getTwig();
 
-        $template = "{{ 'jack' | ucfirst }}";
+        $template = "{{ 'heLLo jack' | ucfirst }}";
 
         $twigTemplate = $twig->createTemplate($template);
-        $this->assertEquals($twigTemplate->render([]), 'Jack');
+        $this->assertEquals($twigTemplate->render([]), 'HeLLo jack');
     }
 
     public function testLcfirstFunction()
     {
         $twig = $this->getTwig();
 
-        $template = "{{ 'JACK' | lcfirst }}";
+        $template = "{{ 'HEllO JACK' | lcfirst }}";
 
         $twigTemplate = $twig->createTemplate($template);
-        $this->assertEquals($twigTemplate->render([]), 'jACK');
+        $this->assertEquals($twigTemplate->render([]), 'hEllO JACK');
     }
 
     public function testLtrimFunction()

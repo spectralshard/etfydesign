@@ -51,6 +51,9 @@ $this['site_url'] = asset('');
     <link href="{{ [
     'assets/css/theme.css',
     'assets/vendor/animate.css/animate.min.css',
+    'assets/vendor/owl/css/owl.carousel.min.css',
+    'assets/vendor/owl/css/owl.theme.default.min.css',
+    'assets/vendor/lightbox2/css/lightbox.min.css',
     ]|theme }}" rel="stylesheet">
     {% styles %}
 </head>
@@ -68,9 +71,11 @@ $this['site_url'] = asset('');
 <span id="flash" data-type="{{ type }}" data-message="{{ message }}"></span>
 {% endflash %}
 <script src="{{ [
+'assets/vendor/jquery/jquery-3.5.1.min.js',
 'assets/js/scripts.js',
-'assets/vendor/jquery/jquery-3.4.1.min.js',
 'assets/vendor/bootstrap/js/bootstrap.min.js',
+'assets/vendor/owl/js/owl.carousel.min.js',
+'assets/vendor/lightbox2/js/lightbox.min.js',
 ]|theme }}"></script>
 {% framework extras %}
 {% scripts %}

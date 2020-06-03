@@ -20,7 +20,7 @@ class CleanupJob
     /** @var bool */
     protected $sendNotifications = true;
 
-    public function __construct(Collection $backupDestinations, CleanupStrategy $strategy, bool $disableNotifications)
+    public function __construct(Collection $backupDestinations, CleanupStrategy $strategy, bool $disableNotifications = false)
     {
         $this->backupDestinations = $backupDestinations;
 
@@ -42,7 +42,7 @@ class CleanupJob
                 $this->strategy->deleteOldBackups($backupDestination->backups());
                 $this->sendNotification(new CleanupWasSuccessful($backupDestination));
 
-                $usedStorage = Format::humanReadableSize($backupDestination->usedStorage());
+                $usedStorage = Format::humanReadableSize($backupDestination->fresh()->usedStorage());
                 consoleOutput()->info("Used storage after cleanup: {$usedStorage}.");
             } catch (Exception $exception) {
                 consoleOutput()->error("Cleanup failed because: {$exception->getMessage()}.");

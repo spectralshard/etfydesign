@@ -11,7 +11,7 @@ This plugin let you create backups of your files and databases. It uses the amaz
 
 <a name="requirements"></a>
 ## Requirements
-This backup package requires **PHP 7 or higher** with the [ZIP module](http://php.net/manual/en/book.zip.php) and **Laravel 5.5 or higher**. It's not compatible with Windows servers.
+This backup package requires **PHP 7.1 or higher** with the [ZIP module](http://php.net/manual/en/book.zip.php) and **Laravel 5.5 or higher**. It's not compatible with Windows servers.
 
 The plugin needs free disk space where it can create backups. Ensure that you have **at least** as much free space as the total size of the files you want to backup.
 
@@ -54,6 +54,24 @@ Then add to the `config/filesystems.php` file the followed array with your token
 ]
 ```
 Be sure that you select `Dropbox` option from settings.
+
+##### Webdav usage
+
+Then add to the `config/filesystems.php` file the followed array with your token and app name:
+```php
+'disks' => [
+    ...
+            'webdav' => [
+            'driver' => 'webdav',
+            'baseUri' => 'YOUR_WEBDAV_DOMAIN',
+            'path_prefix' => '/remote.php/dav/files/USERNAME/', //for nextcloud
+            'path_alias' => '',
+            'userName' => 'USER',
+            'password' => 'PASSWORD',
+        ],
+]
+```
+Be sure that you select `Webdav` option from settings.
 
 <a name="dumping-db"></a>
 ## Dumping the database

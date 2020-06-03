@@ -9,6 +9,7 @@ use Spatie\Backup\Commands\BackupCommand;
 use Spatie\Backup\Commands\CleanupCommand;
 use Spatie\Backup\Commands\MonitorCommand;
 use Spatie\Backup\Notifications\EventHandler;
+use Spatie\Backup\Tasks\Cleanup\CleanupStrategy;
 
 class BackupServiceProvider extends ServiceProvider
 {
@@ -35,6 +36,8 @@ class BackupServiceProvider extends ServiceProvider
         $this->app->bind('command.backup:clean', CleanupCommand::class);
         $this->app->bind('command.backup:list', ListCommand::class);
         $this->app->bind('command.backup:monitor', MonitorCommand::class);
+
+        $this->app->bind(CleanupStrategy::class, config('backup.cleanup.strategy'));
 
         $this->commands([
             'command.backup:run',

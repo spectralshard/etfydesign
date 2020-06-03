@@ -1,4 +1,4 @@
-1579021619a:1:{s:11:"default.htm";a:7:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:2933:"description = "Default Layout"
+1591215421a:1:{s:11:"default.htm";a:7:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:3103:"description = "Default Layout"
 
 [localePicker language]
 forceUrl = 0
@@ -51,6 +51,9 @@ $this['site_url'] = asset('');
     <link href="{{ [
     'assets/css/theme.css',
     'assets/vendor/animate.css/animate.min.css',
+    'assets/vendor/owl/css/owl.carousel.min.css',
+    'assets/vendor/owl/css/owl.theme.default.min.css',
+    'assets/vendor/lightbox2/css/lightbox.min.css',
     ]|theme }}" rel="stylesheet">
     {% styles %}
 </head>
@@ -68,14 +71,16 @@ $this['site_url'] = asset('');
 <span id="flash" data-type="{{ type }}" data-message="{{ message }}"></span>
 {% endflash %}
 <script src="{{ [
+'assets/vendor/jquery/jquery-3.5.1.min.js',
 'assets/js/scripts.js',
-'assets/vendor/jquery/jquery-3.4.1.min.js',
 'assets/vendor/bootstrap/js/bootstrap.min.js',
+'assets/vendor/owl/js/owl.carousel.min.js',
+'assets/vendor/lightbox2/js/lightbox.min.js',
 ]|theme }}"></script>
 {% framework extras %}
 {% scripts %}
 </body>
-</html>";s:5:"mtime";i:1574276277;s:6:"markup";s:2616:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1591210860;s:6:"markup";s:2802:"<!DOCTYPE html>
 <html>
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70359045-7"></script>
@@ -112,6 +117,9 @@ $this['site_url'] = asset('');
     <link href="{{ [
     'assets/css/theme.css',
     'assets/vendor/animate.css/animate.min.css',
+    'assets/vendor/owl/css/owl.carousel.min.css',
+    'assets/vendor/owl/css/owl.theme.default.min.css',
+    'assets/vendor/lightbox2/css/lightbox.min.css',
     ]|theme }}" rel="stylesheet">
     {% styles %}
 </head>
@@ -129,19 +137,20 @@ $this['site_url'] = asset('');
 <span id="flash" data-type="{{ type }}" data-message="{{ message }}"></span>
 {% endflash %}
 <script src="{{ [
+'assets/vendor/jquery/jquery-3.5.1.min.js',
 'assets/js/scripts.js',
-'assets/vendor/jquery/jquery-3.4.1.min.js',
 'assets/vendor/bootstrap/js/bootstrap.min.js',
+'assets/vendor/owl/js/owl.carousel.min.js',
+'assets/vendor/lightbox2/js/lightbox.min.js',
 ]|theme }}"></script>
 {% framework extras %}
 {% scripts %}
 </body>
-</html>";s:4:"code";s:226:"
-use RainLab\Translate\Classes\Translator;
+</html>";s:4:"code";s:216:"use RainLab\Translate\Classes\Translator;
 function onInit()
 {
     $translator = Translator::instance();
     $lang = $translator->getLocale();
 $this['lang'] = $translator->getLocale();
 $this['site_url'] = asset('');
-}";s:11:"description";s:14:"Default Layout";s:21:"localePicker language";a:1:{s:8:"forceUrl";s:1:"0";}}}
+}";s:11:"description";s:14:"Default Layout";s:21:"localePicker language";a:1:{s:8:"forceUrl";s:1:"0";}}}

@@ -4,15 +4,15 @@ description = "Footer"
     <div class="container">
     <div class="row">
         <div class="col-12 text-center text-white">
-            <p style="display: inline-block">
-                {{'Follow me on: '|_ }}
-            </p>&nbsp;&nbsp;&nbsp;
-            <a href="https://www.facebook.com/Etfy-Design-920616611347167/" class="text-white" target="_blank">
+            {% partial 'socials' %}
+            <!--
+            <a href="" class="text-white" target="_blank">
                 <i class="fab fa-facebook-square fa-lg"></i>
             </a>&nbsp;&nbsp;&nbsp;
-            <a href="https://etfy.deviantart.com" class="text-white" target="_blank">
+            <a href="" class="text-white" target="_blank">
                 <i class="fab fa-deviantart fa-lg"></i>
             </a>
+            -->
         </div>
         <div class="col-12 text-center text-white">
             <p>{{'All rights reserved'|_ }} &copy; {{ "now"|date("Y") }}</p>

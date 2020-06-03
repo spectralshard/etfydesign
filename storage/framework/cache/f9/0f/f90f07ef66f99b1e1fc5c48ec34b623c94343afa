@@ -1,4 +1,4 @@
-1579021619a:1:{s:16:"blog/article.htm";a:10:{s:8:"fileName";s:16:"blog/article.htm";s:7:"content";s:1356:"title = "Article"
+1591215421a:1:{s:16:"blog/article.htm";a:10:{s:8:"fileName";s:16:"blog/article.htm";s:7:"content";s:1356:"title = "Article"
 url = "/blogue/article/:slug"
 layout = "default"
 is_hidden = 0
@@ -45,7 +45,7 @@ function onEnd()
                     </a>
                 </div>
 
-</section>";s:5:"mtime";i:1523209519;s:6:"markup";s:1053:"<section id="blog">
+</section>";s:5:"mtime";i:1590684834;s:6:"markup";s:1053:"<section id="blog">
     <div class="container">
         <div class="row">
         <div class="col-12">

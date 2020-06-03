@@ -1,0 +1,46 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    site_name:
+        label: Site name
+        comment: The website name as it should appear on the front-end
+        default: Etfy Design
+        span: auto
+
+    site_motto:
+        label: Site motto
+        comment: A short statement about the website.
+        default: Get back to basics
+        span: auto
+
+    facebook_url:
+        label: Facebook URL
+        span: auto
+        default:
+
+    twitter_url:
+        label: Twitter URL
+        span: auto
+        default:
+
+    linkedin_url:
+        label: LinkedIn URL
+        span: auto
+        default:
+
+    instagram_url:
+        label: Instagram URL
+        span: auto
+        default:
+
+    pinterest_url:
+        label: Pinterest URL
+        span: auto
+        default:
+
+    deviantart_url:
+        label: Deviant Art URL
+        span: auto
+        default:

@@ -1,37 +1,37 @@
-1579021619a:1:{s:10:"footer.htm";a:6:{s:8:"fileName";s:10:"footer.htm";s:7:"content";s:829:"description = "Footer"
+1591215421a:1:{s:10:"footer.htm";a:6:{s:8:"fileName";s:10:"footer.htm";s:7:"content";s:697:"description = "Footer"
 ==
 <section id="footer">
     <div class="container">
     <div class="row">
         <div class="col-12 text-center text-white">
-            <p style="display: inline-block">
-                {{'Follow me on: '|_ }}
-            </p>&nbsp;&nbsp;&nbsp;
-            <a href="https://www.facebook.com/Etfy-Design-920616611347167/" class="text-white" target="_blank">
+            {% partial 'socials' %}
+            <!--
+            <a href="" class="text-white" target="_blank">
                 <i class="fab fa-facebook-square fa-lg"></i>
             </a>&nbsp;&nbsp;&nbsp;
-            <a href="https://etfy.deviantart.com" class="text-white" target="_blank">
+            <a href="" class="text-white" target="_blank">
                 <i class="fab fa-deviantart fa-lg"></i>
             </a>
+            -->
         </div>
         <div class="col-12 text-center text-white">
             <p>{{'All rights reserved'|_ }} &copy; {{ "now"|date("Y") }}</p>
         </div>
     </div>
     </div>
-</section>";s:5:"mtime";i:1574191677;s:6:"markup";s:803:"<section id="footer">
+</section>";s:5:"mtime";i:1591214050;s:6:"markup";s:671:"<section id="footer">
     <div class="container">
     <div class="row">
         <div class="col-12 text-center text-white">
-            <p style="display: inline-block">
-                {{'Follow me on: '|_ }}
-            </p>&nbsp;&nbsp;&nbsp;
-            <a href="https://www.facebook.com/Etfy-Design-920616611347167/" class="text-white" target="_blank">
+            {% partial 'socials' %}
+            <!--
+            <a href="" class="text-white" target="_blank">
                 <i class="fab fa-facebook-square fa-lg"></i>
             </a>&nbsp;&nbsp;&nbsp;
-            <a href="https://etfy.deviantart.com" class="text-white" target="_blank">
+            <a href="" class="text-white" target="_blank">
                 <i class="fab fa-deviantart fa-lg"></i>
             </a>
+            -->
         </div>
         <div class="col-12 text-center text-white">
             <p>{{'All rights reserved'|_ }} &copy; {{ "now"|date("Y") }}</p>

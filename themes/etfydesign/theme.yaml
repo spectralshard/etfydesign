@@ -2,4 +2,5 @@ name: 'Etfy Design'
 description: 'Etfy Design main theme'
 author: AlexCorp
 homepage: alexcorp.ca
+form: theme_fields.yaml
 code: ''

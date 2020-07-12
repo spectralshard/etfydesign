@@ -37,9 +37,9 @@
         <div class="gallery-itemscontent">
             <div id="gallery_in_post" class="owl-carousel owl-theme owl-slider">
                 {% for image in gallery.images %}
-                    <a class="#" href="{{ image.path }}" title="{{image.title}}" data-lightbox="set">
-                    <img class="img-fluid" title="{{image.title}}" src="{{ image.path }}" alt="">
-                    </a>
+                <a class="#" href="{{ image.path }}" title="{{image.title}}" data-lightbox="set">
+                    <img class="img-fluid" title="{{image.title}}" src="{{ image.path | resize(500, false, { mode: 'crop', quality: '100', extension: 'jpg' }) }}" alt="{{image.title}}">
+                </a>
                 {% endfor %}
             </div>
         </div>

@@ -1,0 +1,38 @@
+title = "Portfolio-developer"
+url = "/portfolio-developer"
+layout = "dev"
+description = "Page pour developer"
+meta_title = "Portfolio developer of Estelle Foisy"
+meta_description = "My last creation in Web, section about, section university projects, section work and more."
+is_hidden = 0
+
+[simpleContact devcontact]
+nameTitle = "Full Name"
+emailTitle = "Email"
+phoneTitle = "Phone"
+subjectTitle = "Subject"
+messageTitle = "Message"
+buttonText = "Submit"
+displayPhone = 1
+detailedErrors = 1
+==
+<div id="about">
+    {% partial 'dev/about' %}
+</div>
+
+<div id="universityproject">
+    {% partial 'dev/universityproject' %}
+</div>
+
+<div id="work">
+    {% partial 'dev/work' %}
+</div>
+
+<div id="interests">
+    {% partial 'dev/interests' %}
+</div>
+
+<div id="contact">
+    {% partial 'dev/contact' %}
+</div>
+</div>

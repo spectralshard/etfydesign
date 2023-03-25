@@ -4,36 +4,36 @@
             <img src="{{ 'assets/images/dev/photoblackwhiteprofil.JPG'|theme }}">
         </div>
         <div class="about-col-2">
-            <h1 class="sub-title">About me</h1>
+            <h1 class="sub-title">{{ 'About me'|_ }}</h1>
             <p></p>
             <div class="tab-titles">
-                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                <p class="tab-links"  onclick="opentab('experience')">Experience</p>
-                <p class="tab-links"  onclick="opentab('education')">Education</p>
+                <p class="tab-links active-link" onclick="opentab('skills')">{{ 'Skills'|_ }}</p>
+                <p class="tab-links"  onclick="opentab('experience')">{{ 'Experience'|_ }}</p>
+                <p class="tab-links"  onclick="opentab('education')">{{ 'Education'|_ }}</p>
             </div>
             <div class="tab-contents active-tab" id="skills">
                 <ul>
-                    <li><span>Object-oriented programming:</span><br>C++/Java/Typescript</li>
-                    <li><span>Human-machine interface language:</span><br>Java Swing</li>
-                    <li><span>SQL database:</span><br>MySQL database</li>
-                    <li><span>Other programming languages:</span><br>HTML, CSS, R, Assembly Language (EMU8086)</li>
-                    <li><span>Unified Modeling Language:</span><br>StarUML</li>
-                    <li><span>Mock-up software for HMI:</span><br>Balsamiq</li>
-                    <li><span>IDE knowledge:</span><br>Code::Blocks, Eclipse, NetBeans, Microsoft Visual Studio Code</li>
-                    <li><span>Other knowledges:</span><br>XML, JSON</li>
+                    <li><span>{{ 'Object-oriented programming:'|_ }}</span><br>C++/Java/Typescript</li>
+                    <li><span>{{ 'Human-machine interface language:'|_ }}</span><br>Java Swing</li>
+                    <li><span>{{ 'SQL database:'|_ }}</span><br>{{ 'MySQL database'|_ }}</li>
+                    <li><span>{{ 'Other programming languages:'|_ }}</span><br>HTML, CSS, R, {{ 'Assembly Language'|_ }} (EMU8086)</li>
+                    <li><span>{{ 'Unified Modeling Language:'|_ }}</span><br>StarUML</li>
+                    <li><span>{{ 'Mock-up software for HMI:'|_ }}</span><br>Balsamiq</li>
+                    <li><span>{{ 'IDE knowledge:'|_ }}</span><br>Code::Blocks, Eclipse, NetBeans, Microsoft Visual Studio Code</li>
+                    <li><span>{{ 'Other knowledges:'|_ }}</span><br>XML, JSON</li>
                 </ul>
             </div>
             <div class="tab-contents" id="experience">
                 <ul>
-                    <li><span>January 2023 - today</span><br>Junior developer Internship- Trace Compass project</li>
-                    <li><span>September 2022 - December 2022</span><br>Junior developer Internship- Theia project</li>
+                    <li><span>{{ 'January 2023 - today'|_ }}</span><br>{{ 'Junior developer Internship- Trace Compass project'|_ }}</li>
+                    <li><span>{{ 'September 2022 - December 2022'|_ }}</span><br>{{ 'Junior developer Internship- Theia project'|_ }}</li>
                 </ul>
             </div>
             <div class="tab-contents" id="education">
                 <ul>
-                    <li><span>2023</span><br>Computer Science Certificate</li>
-                    <li><span>2017</span><br>Multidisciplinary Certificate (Psychology/Education)</li>
-                    <li><span>2007</span><br>Diploma of Collegial Studies, Fashion Design</li>
+                    <li><span>2023</span><br>{{ 'Computer Science Certificate'|_ }}</li>
+                    <li><span>2017</span><br>{{ 'Multidisciplinary Certificate (Psychology/Education)'|_ }}</li>
+                    <li><span>2007</span><br>{{ 'Diploma of Collegial Studies, Fashion Design'|_ }}</li>
                 </ul>
             </div>
         </div>

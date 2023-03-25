@@ -3,19 +3,34 @@
         <nav>
             <img src="{{ 'assets/images/etfydesign-logo-white.svg'|theme }}" title="Etfy Design Logo" style="width: 150px; height: 60px">
             <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#universityproject">University projects</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#interests">My interests</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#header">{{ 'Home'|_ }}</a></li>
+                <li><a href="#about">{{ 'About'|_ }}</a></li>
+                <li><a href="#universityproject">{{ 'University projects'|_ }}</a></li>
+                <li><a href="#work">{{ 'Work'|_ }}</a></li>
+                <li><a href="#interests">{{ 'My interests'|_ }}</a></li>
+                <li><a href="#contact">{{ 'Contact'|_ }}</a></li>
+                <li>
+                    {% if lang == 'fr' %}
+                    <a href="#"
+                       data-request="onSwitchLocale"
+                       data-request-data="locale: 'en'" title="English">
+                        English
+                    </a>
+                    {% else %}
+                    <a href="#"
+                       data-request="onSwitchLocale"
+                       data-request-data="locale: 'fr'" title="Français">
+                        Français
+                    </a>
+                    {% endif %}
+                </li>
                 <i class="material-icons" onclick="closemenu()">close</i>
             </ul>
             <i class="material-icons" onclick="openmenu()">menu</i>
         </nav>
         <div class="header-text p-5">
-            <p>Junior Developer</p>
-            <h1>Welcome on my <span>Portfolio</span> page!</h1>
+            <p>{{ 'Junior Developer'|_ }}</p>
+            <h1>{{ 'Welcome on my'|_ }} <span>{{ 'Portfolio'|_ }}</span> {{ 'page!'|_ }}</h1>
         </div>
     </div>
 </div>

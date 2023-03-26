@@ -518,8 +518,8 @@ nav .material-icons{
         background: #712D91;
         position: fixed;
         top: 0;
-        right: -200px;
-        width: 200px;
+        right: -300px;
+        width: 300px;
         height: 100vh;
         padding: 50px;
         z-index: 2;
